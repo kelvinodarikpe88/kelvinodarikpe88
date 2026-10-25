@@ -1,74 +1,422 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="Kelvin Odarikpe — Security Engineer: Application Security, Security Architecture, Detection Engineering, Cloud Security and Infrastructure, Identity, Workloads, APIs">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#070C15"/>
-      <stop offset="55%" stop-color="#0B1524"/>
-      <stop offset="100%" stop-color="#101E33"/>
-    </linearGradient>
-    <linearGradient id="rail" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#37A2FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#2E7DF7" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="#2E7DF7" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#1B2B44" stroke-width="1" stroke-opacity="0.55"/>
-    </pattern>
-  </defs>
+//
+//  SecurityProfileBanner.swift
+//  Kelvin Odarikpe — Security Engineering banner (SwiftUI port of the SVG)
+//
+//  HOW TO USE
+//  1. Xcode > File > New > Project > App > Interface: SwiftUI, Language: Swift.
+//  2. Add this file to the project (File > Add Files to "…", or drag it in).
+//  3. Delete the template's ContentView.swift, or keep this file's ContentView
+//     and delete the template one — there must be exactly one ContentView.
+//  4. Run. Tap "Save PNG" to write a 2560×720 export to the temp directory.
+//
+//  Requires iOS 16+ / macOS 13+ (ImageRenderer + Layout).
+//
 
-  <rect width="1280" height="320" fill="url(#bg)"/>
-  <rect width="1280" height="320" fill="url(#grid)"/>
-  <ellipse cx="1080" cy="40" rx="420" ry="260" fill="url(#glow)"/>
-  <rect x="0" y="0" width="6" height="320" fill="url(#rail)"/>
+import SwiftUI
 
-  <g font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif">
-    <text x="56" y="78" font-size="13" font-weight="600" letter-spacing="4.2" fill="#4E7FB8">SECURITY ENGINEERING PORTFOLIO</text>
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 
-    <text x="54" y="150" font-size="56" font-weight="700" letter-spacing="-0.5" fill="#F3F7FD">Kelvin Odarikpe</text>
+// MARK: - Palette (mirrors the SVG colour tokens)
 
-    <text x="56" y="192" font-size="21" font-weight="500" fill="#A9C0DC">Application Security &#183; Security Architecture &#183; Detection Engineering</text>
+enum BannerPalette {
+    static let bgTop      = Color(hex: 0x070C15)
+    static let bgMid      = Color(hex: 0x0B1524)
+    static let bgBottom   = Color(hex: 0x101E33)
 
-    <text x="56" y="222" font-size="17" font-weight="400" fill="#7C97B8">Cloud Security &amp; Infrastructure &#183; Identity &#183; Workloads &#183; APIs</text>
-  </g>
+    static let grid       = Color(hex: 0x1B2B44)
 
-  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.5" font-weight="600" letter-spacing="1.4">
-    <g>
-      <rect x="56" y="252" width="85" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="72" y="271" fill="#9FB9D8">APPSEC</text>
-    </g>
-    <g>
-      <rect x="153" y="252" width="138" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="169" y="271" fill="#9FB9D8">ARCHITECTURE</text>
-    </g>
-    <g>
-      <rect x="303" y="252" width="111" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="319" y="271" fill="#9FB9D8">DETECTION</text>
-    </g>
-    <g>
-      <rect x="426" y="252" width="76" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="442" y="271" fill="#9FB9D8">CLOUD</text>
-    </g>
-    <g>
-      <rect x="514" y="252" width="76" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="530" y="271" fill="#9FB9D8">INFRA</text>
-    </g>
-    <g>
-      <rect x="602" y="252" width="102" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="618" y="271" fill="#9FB9D8">IDENTITY</text>
-    </g>
-    <g>
-      <rect x="716" y="252" width="111" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="732" y="271" fill="#9FB9D8">WORKLOADS</text>
-    </g>
-    <g>
-      <rect x="839" y="252" width="67" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="855" y="271" fill="#9FB9D8">APIs</text>
-    </g>
-  </g>
+    static let railTop    = Color(hex: 0x37A2FF)
+    static let railBottom = Color(hex: 0x8B5CF6)
+    static let glow       = Color(hex: 0x2E7DF7)
 
-  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1.2">
-    <text x="1060" y="271" fill="#4E7FB8">BERLIN &#183; DE</text>
-  </g>
-</svg>
+    static let eyebrow    = Color(hex: 0x4E7FB8)
+    static let name       = Color(hex: 0xF3F7FD)
+    static let line1      = Color(hex: 0xA9C0DC)
+    static let line2      = Color(hex: 0x7C97B8)
+
+    static let chipFill   = Color(hex: 0x0E1B2C)
+    static let chipStroke = Color(hex: 0x28405F)
+    static let chipText   = Color(hex: 0x9FB9D8)
+}
+
+extension Color {
+    /// 0xRRGGBB → Color
+    init(hex: UInt32) {
+        self.init(
+            .sRGB,
+            red:   Double((hex >> 16) & 0xFF) / 255.0,
+            green: Double((hex >>  8) & 0xFF) / 255.0,
+            blue:  Double( hex        & 0xFF) / 255.0,
+            opacity: 1.0
+        )
+    }
+}
+
+// MARK: - Design constants (the SVG's own coordinate space)
+
+enum BannerDesign {
+    static let width:  CGFloat = 1280
+    static let height: CGFloat = 360
+    static let aspect: CGFloat = width / height
+
+    static let leadingInset: CGFloat = 56
+    static let railWidth:    CGFloat = 6
+    static let gridStep:     CGFloat = 32
+
+    /// Left-to-right reading order, exactly as in the SVG.
+    static let chips: [String] = [
+        "APPSEC", "ARCHITECTURE", "DETECTION", "CLOUD", "INFRA",
+        "IDENTITY", "WORKLOADS", "APIs", "AUTOMATION", "PRIVACY", "AI/ML"
+    ]
+}
+
+// MARK: - Background pieces
+
+private struct GridPattern: View {
+    var body: some View {
+        Canvas { context, size in
+            let step = BannerDesign.gridStep
+            var path = Path()
+
+            var x: CGFloat = 0
+            while x <= size.width {
+                path.move(to: CGPoint(x: x, y: 0))
+                path.addLine(to: CGPoint(x: x, y: size.height))
+                x += step
+            }
+
+            var y: CGFloat = 0
+            while y <= size.height {
+                path.move(to: CGPoint(x: 0, y: y))
+                path.addLine(to: CGPoint(x: size.width, y: y))
+                y += step
+            }
+
+            context.stroke(path, with: .color(BannerPalette.grid.opacity(0.55)), lineWidth: 1)
+        }
+    }
+}
+
+private struct BannerBackground: View {
+    var body: some View {
+        ZStack {
+            LinearGradient(
+                colors: [BannerPalette.bgTop, BannerPalette.bgMid, BannerPalette.bgBottom],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+
+            GridPattern()
+
+            // Radial glow anchored top-right, as in the SVG (cx 1080, cy 40).
+            Ellipse()
+                .fill(
+                    RadialGradient(
+                        colors: [BannerPalette.glow.opacity(0.30),
+                                 BannerPalette.glow.opacity(0.0)],
+                        center: .center,
+                        startRadius: 0,
+                        endRadius: 260
+                    )
+                )
+                .frame(width: 840, height: 520)
+                .offset(x: 440, y: -140)
+        }
+    }
+}
+
+private struct GradientRail: View {
+    var body: some View {
+        Rectangle()
+            .fill(
+                LinearGradient(
+                    colors: [BannerPalette.railTop, BannerPalette.railBottom],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            )
+            .frame(width: BannerDesign.railWidth)
+    }
+}
+
+// MARK: - Chips
+
+private struct Chip: View {
+    let title: String
+
+    var body: some View {
+        Text(title)
+            .font(.system(size: 12.5, weight: .semibold, design: .monospaced))
+            .tracking(1.4)
+            .foregroundStyle(BannerPalette.chipText)
+            .lineLimit(1)
+            .fixedSize()
+            .padding(.horizontal, 16)
+            .frame(height: 30)
+            .background(
+                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                    .fill(BannerPalette.chipFill)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                    .stroke(BannerPalette.chipStroke, lineWidth: 1)
+            )
+    }
+}
+
+/// Wraps chips onto extra lines when the banner is rendered narrow.
+/// At the native 1280pt width they stay on a single row, matching the SVG.
+@available(iOS 16.0, macOS 13.0, *)
+private struct ChipFlow: Layout {
+    var spacing: CGFloat = 11
+    var lineSpacing: CGFloat = 11
+
+    func sizeThatFits(proposal: ProposedViewSize,
+                      subviews: Subviews,
+                      cache: inout ()) -> CGSize {
+        let maxWidth = proposal.width ?? .infinity
+        var x: CGFloat = 0
+        var y: CGFloat = 0
+        var lineHeight: CGFloat = 0
+        var widestLine: CGFloat = 0
+
+        for subview in subviews {
+            let size = subview.sizeThatFits(.unspecified)
+            if x > 0, x + size.width > maxWidth {
+                x = 0
+                y += lineHeight + lineSpacing
+                lineHeight = 0
+            }
+            widestLine = max(widestLine, x + size.width)
+            x += size.width + spacing
+            lineHeight = max(lineHeight, size.height)
+        }
+
+        return CGSize(width: widestLine, height: y + lineHeight)
+    }
+
+    func placeSubviews(in bounds: CGRect,
+                       proposal: ProposedViewSize,
+                       subviews: Subviews,
+                       cache: inout ()) {
+        var x = bounds.minX
+        var y = bounds.minY
+        var lineHeight: CGFloat = 0
+
+        for subview in subviews {
+            let size = subview.sizeThatFits(.unspecified)
+            if x > bounds.minX, x + size.width > bounds.maxX {
+                x = bounds.minX
+                y += lineHeight + lineSpacing
+                lineHeight = 0
+            }
+            subview.place(
+                at: CGPoint(x: x, y: y),
+                anchor: .topLeading,
+                proposal: ProposedViewSize(size)
+            )
+            x += size.width + spacing
+            lineHeight = max(lineHeight, size.height)
+        }
+    }
+}
+
+// MARK: - The banner at its native size
+
+@available(iOS 16.0, macOS 13.0, *)
+public struct BannerCanvas: View {
+    public init() {}
+
+    public var body: some View {
+        content
+            .frame(width: BannerDesign.width,
+                   height: BannerDesign.height,
+                   alignment: .topLeading)
+            .background(BannerBackground())
+            .overlay(alignment: .leading) { GradientRail() }
+            .overlay(alignment: .topTrailing) {
+                Text("BERLIN · DE")
+                    .font(.system(size: 12, weight: .regular, design: .monospaced))
+                    .tracking(1.2)
+                    .foregroundStyle(BannerPalette.eyebrow)
+                    .padding(.top, 66)
+                    .padding(.trailing, 44)
+            }
+            .clipped()
+    }
+
+    private var content: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text("SECURITY ENGINEERING PORTFOLIO")
+                .font(.system(size: 13, weight: .semibold))
+                .tracking(4.2)
+                .foregroundStyle(BannerPalette.eyebrow)
+
+            Text("Kelvin Odarikpe")
+                .font(.system(size: 56, weight: .bold))
+                .tracking(-0.5)
+                .foregroundStyle(BannerPalette.name)
+                .padding(.top, 22)
+
+            Text("Application Security · Security Architecture · Detection Engineering")
+                .font(.system(size: 21, weight: .medium))
+                .foregroundStyle(BannerPalette.line1)
+                .padding(.top, 12)
+
+            Text("Cloud Security & Infrastructure · Identity · Workloads · APIs")
+                .font(.system(size: 17, weight: .regular))
+                .foregroundStyle(BannerPalette.line2)
+                .padding(.top, 9)
+
+            Text("Security Automation · Data Protection & Privacy · AI & ML")
+                .font(.system(size: 17, weight: .regular))
+                .foregroundStyle(BannerPalette.line2)
+                .padding(.top, 5)
+
+            // No fixed width here: the VStack's own width (1280 − 56 leading inset)
+            // is the constraint, and the chips total ~1170pt, so they stay on one
+            // row at native size and wrap gracefully when narrowed.
+            ChipFlow(spacing: 10, lineSpacing: 10) {
+                ForEach(BannerDesign.chips, id: \.self) { Chip(title: $0) }
+            }
+            .padding(.top, 26)
+        }
+        .lineLimit(1)
+        .minimumScaleFactor(1)
+        .padding(.leading, BannerDesign.leadingInset)
+        .padding(.top, 62)
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    }
+}
+
+// MARK: - Responsive wrapper (use this in your layout)
+
+@available(iOS 16.0, macOS 13.0, *)
+public struct SecurityProfileBanner: View {
+    public var cornerRadius: CGFloat
+
+    public init(cornerRadius: CGFloat = 14) {
+        self.cornerRadius = cornerRadius
+    }
+
+    public var body: some View {
+        GeometryReader { geo in
+            let scale = geo.size.width / BannerDesign.width
+            BannerCanvas()
+                .scaleEffect(scale, anchor: .topLeading)
+                .frame(width: BannerDesign.width * scale,
+                       height: BannerDesign.height * scale,
+                       alignment: .topLeading)
+        }
+        .aspectRatio(BannerDesign.aspect, contentMode: .fit)
+        .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
+    }
+}
+
+// MARK: - PNG export (2560 × 720 at scale 2)
+
+@available(iOS 16.0, macOS 13.0, *)
+@MainActor
+public func exportBannerPNG(scale: CGFloat = 2) -> URL? {
+    let renderer = ImageRenderer(content: BannerCanvas())
+    renderer.scale = scale
+
+    let data: Data?
+    #if canImport(UIKit)
+    data = renderer.uiImage?.pngData()
+    #elseif canImport(AppKit)
+    if let image = renderer.nsImage,
+       let tiff = image.tiffRepresentation,
+       let rep = NSBitmapImageRep(data: tiff) {
+        data = rep.representation(using: .png, properties: [:])
+    } else {
+        data = nil
+    }
+    #else
+    data = nil
+    #endif
+
+    guard let png = data else { return nil }
+    let url = FileManager.default.temporaryDirectory
+        .appendingPathComponent("kelvin_banner_2560x720.png")
+    do {
+        try png.write(to: url, options: .atomic)
+        return url
+    } catch {
+        return nil
+    }
+}
+
+// MARK: - ContentView
+
+@available(iOS 16.0, macOS 13.0, *)
+public struct ContentView: View {
+    @State private var exportedURL: URL?
+    @State private var showFailure = false
+
+    public init() {}
+
+    public var body: some View {
+        ScrollView {
+            VStack(spacing: 24) {
+                SecurityProfileBanner()
+
+                Button("Save PNG (2560 × 720)") {
+                    if let url = exportBannerPNG() {
+                        exportedURL = url
+                        showFailure = false
+                    } else {
+                        showFailure = true
+                    }
+                }
+                .buttonStyle(.borderedProminent)
+
+                if let exportedURL {
+                    VStack(spacing: 6) {
+                        Text("Saved to your temp directory")
+                            .font(.footnote)
+                        Text(exportedURL.path)
+                            .font(.caption2)
+                            .multilineTextAlignment(.center)
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding(.horizontal)
+                }
+
+                if showFailure {
+                    Text("Export failed on this platform.")
+                        .font(.footnote)
+                        .foregroundStyle(.red)
+                }
+            }
+            .padding()
+        }
+        .background(Color(hex: 0x070C15).ignoresSafeArea())
+        .preferredColorScheme(.dark)
+    }
+}
+
+// MARK: - Preview
+
+@available(iOS 16.0, macOS 13.0, *)
+struct SecurityProfileBanner_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            SecurityProfileBanner()
+                .padding()
+                .background(Color(hex: 0x070C15))
+                .previewDisplayName("Native width")
+
+            SecurityProfileBanner()
+                .frame(width: 360)
+                .padding()
+                .background(Color(hex: 0x070C15))
+                .previewDisplayName("Narrow — chips wrap")
+        }
+    }
+}
+
