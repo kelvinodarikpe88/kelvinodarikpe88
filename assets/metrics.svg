@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="834"
+     viewBox="0 0 1280 834" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070C15"/>
+      <stop offset="55%" stop-color="#0B1524"/>
+      <stop offset="100%" stop-color="#101E33"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#37A2FF"/>
+      <stop offset="60%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="blueviolet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#37A2FF"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#37A2FF" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#37A2FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowv" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1B2B44" stroke-width="1" stroke-opacity="0.5"/>
+    </pattern>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7C97B8"/>
+    </marker>
+    <marker id="arwb" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#37A2FF"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="834" fill="url(#bg)"/>
+  <rect width="1280" height="834" fill="url(#grid)"/>
+  <ellipse cx="640" cy="0" rx="620" ry="230" fill="url(#glow)"/>
+  <rect x="0" y="0" width="7" height="834" fill="url(#rail)"/>
+  <text x="56" y="56" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" letter-spacing="3.6" fill="#4E7FB8">OUTCOMES · EVIDENCE CLASS</text>
+  <text x="54" y="96" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#F3F7FD">Every number, and what keeps it honest</text>
+  <text x="56" y="122" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="13" font-weight="400" fill="#7C97B8">Eight production outcomes. Each carries the instrument that produced it and the counter-metric that has to stay flat for the claim to hold.</text>
+  <rect x="56" y="166" width="576" height="132" rx="12" fill="#0F1D30" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="56" y="176" width="3" height="112" rx="1.5" fill="#37A2FF" opacity="0.95"/>
+  <text x="78" y="193" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.4" font-weight="600" letter-spacing="1.5" fill="#4E7FB8">MEAN TIME TO DETECT</text>
+  <rect x="501.1" y="179" width="116.89999999999999" height="20" rx="5" fill="#0E1B2C" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <text x="511.1" y="192.7" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#37A2FF">P2 OWNER-REPORTED</text>
+  <text x="78" y="228" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="25" font-weight="700" fill="#F3F7FD">−62%</text>
+  <path d="M78,242 L610,242" stroke="#28405F" stroke-width="1" fill="none" opacity="0.35"/>
+  <text x="78" y="262" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">MEASURED BY</text>
+  <text x="78" y="278" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" font-weight="400" fill="#A9C0DC">Sentinel / KQL detection timestamps, quarter on quarter</text>
+  <text x="610" y="262" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" text-anchor="end" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">COUNTER-METRIC</text>
+  <text x="610" y="278" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" text-anchor="end" font-weight="400" fill="#7C97B8">Alert volume and suppression count must stay flat</text>
+  <rect x="648" y="166" width="576" height="132" rx="12" fill="#0F1D30" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="648" y="176" width="3" height="112" rx="1.5" fill="#22D3EE" opacity="0.95"/>
+  <text x="670" y="193" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.4" font-weight="600" letter-spacing="1.5" fill="#4E7FB8">DETECTION FALSE POSITIVES</text>
+  <rect x="1093.1" y="179" width="116.89999999999999" height="20" rx="5" fill="#0E1B2C" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <text x="1103.1" y="192.7" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#37A2FF">P2 OWNER-REPORTED</text>
+  <text x="670" y="228" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="25" font-weight="700" fill="#F3F7FD">12% → 6%</text>
+  <path d="M670,242 L1202,242" stroke="#28405F" stroke-width="1" fill="none" opacity="0.35"/>
+  <text x="670" y="262" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">MEASURED BY</text>
+  <text x="670" y="278" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" font-weight="400" fill="#A9C0DC">Analyst disposition labels on a sampled alert population</text>
+  <text x="1202" y="262" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" text-anchor="end" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">COUNTER-METRIC</text>
+  <text x="1202" y="278" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" text-anchor="end" font-weight="400" fill="#7C97B8">True-positive coverage must not fall with the noise</text>
+  <rect x="56" y="314" width="576" height="132" rx="12" fill="#0F1D30" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="56" y="324" width="3" height="112" rx="1.5" fill="#8B5CF6" opacity="0.95"/>
+  <text x="78" y="341" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.4" font-weight="600" letter-spacing="1.5" fill="#4E7FB8">STANDING PRIVILEGED ACCESS</text>
+  <rect x="501.1" y="327" width="116.89999999999999" height="20" rx="5" fill="#0E1B2C" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <text x="511.1" y="340.7" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#37A2FF">P2 OWNER-REPORTED</text>
+  <text x="78" y="376" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="25" font-weight="700" fill="#F3F7FD">−68%</text>
+  <path d="M78,390 L610,390" stroke="#28405F" stroke-width="1" fill="none" opacity="0.35"/>
+  <text x="78" y="410" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">MEASURED BY</text>
+  <text x="78" y="426" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" font-weight="400" fill="#A9C0DC">PIM / JIT eligibility vs permanent role assignments</text>
+  <text x="610" y="410" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" text-anchor="end" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">COUNTER-METRIC</text>
+  <text x="610" y="426" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" text-anchor="end" font-weight="400" fill="#7C97B8">Break-glass activations and JIT approval latency</text>
+  <rect x="648" y="314" width="576" height="132" rx="12" fill="#0F1D30" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="648" y="324" width="3" height="112" rx="1.5" fill="#FBBF24" opacity="0.95"/>
+  <text x="670" y="341" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.4" font-weight="600" letter-spacing="1.5" fill="#4E7FB8">CRITICAL VULNERABILITIES OPEN</text>
+  <rect x="1093.1" y="327" width="116.89999999999999" height="20" rx="5" fill="#0E1B2C" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <text x="1103.1" y="340.7" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#37A2FF">P2 OWNER-REPORTED</text>
+  <text x="670" y="376" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="25" font-weight="700" fill="#F3F7FD">847 → 187</text>
+  <path d="M670,390 L1202,390" stroke="#28405F" stroke-width="1" fill="none" opacity="0.35"/>
+  <text x="670" y="410" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">MEASURED BY</text>
+  <text x="670" y="426" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" font-weight="400" fill="#A9C0DC">EPSS + KEV triage queue snapshot, same asset scope</text>
+  <text x="1202" y="410" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" text-anchor="end" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">COUNTER-METRIC</text>
+  <text x="1202" y="426" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" text-anchor="end" font-weight="400" fill="#7C97B8">Re-open rate and mean age of open criticals</text>
+  <rect x="56" y="462" width="576" height="132" rx="12" fill="#0F1D30" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="56" y="472" width="3" height="112" rx="1.5" fill="#37A2FF" opacity="0.95"/>
+  <text x="78" y="489" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.4" font-weight="600" letter-spacing="1.5" fill="#4E7FB8">REMEDIATION CYCLE TIME</text>
+  <rect x="501.1" y="475" width="116.89999999999999" height="20" rx="5" fill="#0E1B2C" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <text x="511.1" y="488.7" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#37A2FF">P2 OWNER-REPORTED</text>
+  <text x="78" y="524" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="25" font-weight="700" fill="#F3F7FD">67 → 12 days</text>
+  <path d="M78,538 L610,538" stroke="#28405F" stroke-width="1" fill="none" opacity="0.35"/>
+  <text x="78" y="558" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">MEASURED BY</text>
+  <text x="78" y="574" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" font-weight="400" fill="#A9C0DC">Ticket open to verified-fixed timestamps, per severity</text>
+  <text x="610" y="558" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" text-anchor="end" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">COUNTER-METRIC</text>
+  <text x="610" y="574" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" text-anchor="end" font-weight="400" fill="#7C97B8">Post-remediation regression rate</text>
+  <rect x="648" y="462" width="576" height="132" rx="12" fill="#0F1D30" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="648" y="472" width="3" height="112" rx="1.5" fill="#34D399" opacity="0.95"/>
+  <text x="670" y="489" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.4" font-weight="600" letter-spacing="1.5" fill="#4E7FB8">JOINER / MOVER / LEAVER</text>
+  <rect x="1093.1" y="475" width="116.89999999999999" height="20" rx="5" fill="#0E1B2C" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <text x="1103.1" y="488.7" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#37A2FF">P2 OWNER-REPORTED</text>
+  <text x="670" y="524" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="25" font-weight="700" fill="#F3F7FD">84% automated</text>
+  <path d="M670,538 L1202,538" stroke="#28405F" stroke-width="1" fill="none" opacity="0.35"/>
+  <text x="670" y="558" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">MEASURED BY</text>
+  <text x="670" y="574" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" font-weight="400" fill="#A9C0DC">IdP lifecycle events, each with an evidence artefact</text>
+  <text x="1202" y="558" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" text-anchor="end" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">COUNTER-METRIC</text>
+  <text x="1202" y="574" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" text-anchor="end" font-weight="400" fill="#7C97B8">Access-review exceptions and orphaned accounts</text>
+  <rect x="56" y="610" width="576" height="132" rx="12" fill="#0F1D30" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="56" y="620" width="3" height="112" rx="1.5" fill="#8B5CF6" opacity="0.95"/>
+  <text x="78" y="637" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.4" font-weight="600" letter-spacing="1.5" fill="#4E7FB8">SOC 2 TYPE II</text>
+  <rect x="501.1" y="623" width="116.89999999999999" height="20" rx="5" fill="#0E1B2C" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <text x="511.1" y="636.7" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#37A2FF">P2 OWNER-REPORTED</text>
+  <text x="78" y="672" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="25" font-weight="700" fill="#F3F7FD">zero exceptions</text>
+  <path d="M78,686 L610,686" stroke="#28405F" stroke-width="1" fill="none" opacity="0.35"/>
+  <text x="78" y="706" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">MEASURED BY</text>
+  <text x="78" y="722" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" font-weight="400" fill="#A9C0DC">Continuous control evidence, tested in the audit window</text>
+  <text x="610" y="706" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" text-anchor="end" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">COUNTER-METRIC</text>
+  <text x="610" y="722" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" text-anchor="end" font-weight="400" fill="#7C97B8">Control failure rate between audit windows</text>
+  <rect x="648" y="610" width="576" height="132" rx="12" fill="#0F1D30" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="648" y="620" width="3" height="112" rx="1.5" fill="#22D3EE" opacity="0.95"/>
+  <text x="670" y="637" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.4" font-weight="600" letter-spacing="1.5" fill="#4E7FB8">DETECTION CHANGE GATE</text>
+  <rect x="1093.1" y="623" width="116.89999999999999" height="20" rx="5" fill="#0E1B2C" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <text x="1103.1" y="636.7" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#37A2FF">P2 OWNER-REPORTED</text>
+  <text x="670" y="672" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="25" font-weight="700" fill="#F3F7FD">pytest gated</text>
+  <path d="M670,686 L1202,686" stroke="#28405F" stroke-width="1" fill="none" opacity="0.35"/>
+  <text x="670" y="706" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">MEASURED BY</text>
+  <text x="670" y="722" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" font-weight="400" fill="#A9C0DC">CI result on every rule-changing commit</text>
+  <text x="1202" y="706" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="8.8" text-anchor="end" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">COUNTER-METRIC</text>
+  <text x="1202" y="722" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.2" text-anchor="end" font-weight="400" fill="#7C97B8">Rule coverage vs ATT&amp;CK delta</text>
+  <path d="M56,756 L1224,756" stroke="#28405F" stroke-width="1" fill="none" opacity="0.5"/>
+  <rect x="56" y="771" width="9" height="9" rx="2" fill="#34D399"/>
+  <text x="72" y="780" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="600" letter-spacing="0.4" fill="#7C97B8">P1 RE-DERIVABLE</text>
+  <rect x="306" y="771" width="9" height="9" rx="2" fill="#37A2FF"/>
+  <text x="322" y="780" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="600" letter-spacing="0.4" fill="#7C97B8">P2 OWNER-REPORTED  ← all eight cards</text>
+  <rect x="606" y="771" width="9" height="9" rx="2" fill="#8B5CF6"/>
+  <text x="622" y="780" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="600" letter-spacing="0.4" fill="#7C97B8">P3 LAB-MEASURED</text>
+  <rect x="856" y="771" width="9" height="9" rx="2" fill="#7C97B8"/>
+  <text x="872" y="780" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10" font-weight="600" letter-spacing="0.4" fill="#7C97B8">P4 TARGET</text>
+  <text x="56" y="810" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#7C97B8">P2 means owner-reported from production roles: the instrument is named, the raw telemetry is not publishable. Each card has a ledger row with period, baseline and a falsification condition — docs/METRICS.md.</text>
+
+</svg>

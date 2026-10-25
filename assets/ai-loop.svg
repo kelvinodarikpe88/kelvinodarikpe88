@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560"
+     viewBox="0 0 1280 560" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070C15"/>
+      <stop offset="55%" stop-color="#0B1524"/>
+      <stop offset="100%" stop-color="#101E33"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#37A2FF"/>
+      <stop offset="60%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="blueviolet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#37A2FF"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#37A2FF" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#37A2FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowv" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1B2B44" stroke-width="1" stroke-opacity="0.5"/>
+    </pattern>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7C97B8"/>
+    </marker>
+    <marker id="arwb" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#37A2FF"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="560" fill="url(#bg)"/>
+  <rect width="1280" height="560" fill="url(#grid)"/>
+  <ellipse cx="640" cy="0" rx="520" ry="240" fill="url(#glowv)"/>
+  <rect x="0" y="0" width="7" height="560" fill="url(#rail)"/>
+  <text x="56" y="56" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" letter-spacing="3.6" fill="#4E7FB8">AI-AUTOMATED SECURITY</text>
+  <text x="54" y="96" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#F3F7FD">Where the model acts — and where it must not</text>
+  <text x="56" y="122" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="13" font-weight="400" fill="#7C97B8">Automation is scoped by blast radius. Read from left to right: authority decreases as consequence increases.</text>
+  <rect x="48" y="158" width="218" height="128" rx="10" fill="#0C1726" fill-opacity="0.92" stroke="#22D3EE" stroke-width="1"/>
+  <rect x="48" y="158" width="218" height="3" rx="1.5" fill="#22D3EE"/>
+  <text x="66" y="192" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.6" fill="#22D3EE">SIGNAL</text>
+  <text x="66" y="210" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" font-weight="400" letter-spacing="0.6" fill="#4E7FB8">ingest</text>
+  <text x="66" y="234" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#A9C0DC">SIEM · EDR · cloud audit</text>
+  <text x="66" y="251" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#A9C0DC">IdP · SaaS · network</text>
+  <path d="M269,222 L281,222" stroke="#7C97B8" stroke-width="1.4" fill="none" opacity="1.0" marker-end="url(#arw)"/>
+  <rect x="286" y="158" width="218" height="128" rx="10" fill="#0C1726" fill-opacity="0.92" stroke="#37A2FF" stroke-width="1"/>
+  <rect x="286" y="158" width="218" height="3" rx="1.5" fill="#37A2FF"/>
+  <text x="304" y="192" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.6" fill="#37A2FF">DETECT</text>
+  <text x="304" y="210" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" font-weight="400" letter-spacing="0.6" fill="#4E7FB8">rules as code</text>
+  <text x="304" y="234" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#A9C0DC">Sigma · YARA-L · KQL</text>
+  <text x="304" y="251" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#A9C0DC">pytest on every change</text>
+  <path d="M507,222 L519,222" stroke="#7C97B8" stroke-width="1.4" fill="none" opacity="1.0" marker-end="url(#arw)"/>
+  <rect x="524" y="158" width="218" height="128" rx="10" fill="#0C1726" fill-opacity="0.92" stroke="#8B5CF6" stroke-width="1"/>
+  <rect x="524" y="158" width="218" height="3" rx="1.5" fill="#8B5CF6"/>
+  <text x="542" y="192" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.6" fill="#8B5CF6">ENRICH</text>
+  <text x="542" y="210" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" font-weight="400" letter-spacing="0.6" fill="#4E7FB8">AI</text>
+  <text x="542" y="234" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#A9C0DC">asset · identity · threat ctx</text>
+  <text x="542" y="251" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#A9C0DC">EPSS · KEV correlation</text>
+  <path d="M745,222 L757,222" stroke="#7C97B8" stroke-width="1.4" fill="none" opacity="1.0" marker-end="url(#arw)"/>
+  <rect x="762" y="158" width="218" height="128" rx="10" fill="#0C1726" fill-opacity="0.92" stroke="#FBBF24" stroke-width="1"/>
+  <rect x="762" y="158" width="218" height="3" rx="1.5" fill="#FBBF24"/>
+  <text x="780" y="192" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.6" fill="#FBBF24">DECIDE</text>
+  <text x="780" y="210" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" font-weight="400" letter-spacing="0.6" fill="#4E7FB8">tiered</text>
+  <text x="780" y="234" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#A9C0DC">auto: read / contain</text>
+  <text x="780" y="251" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#A9C0DC">gate: destructive action</text>
+  <path d="M983,222 L995,222" stroke="#7C97B8" stroke-width="1.4" fill="none" opacity="1.0" marker-end="url(#arw)"/>
+  <rect x="1000" y="158" width="218" height="128" rx="10" fill="#0C1726" fill-opacity="0.92" stroke="#34D399" stroke-width="1"/>
+  <rect x="1000" y="158" width="218" height="3" rx="1.5" fill="#34D399"/>
+  <text x="1018" y="192" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1.6" fill="#34D399">ACT</text>
+  <text x="1018" y="210" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" font-weight="400" letter-spacing="0.6" fill="#4E7FB8">bounded</text>
+  <text x="1018" y="234" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#A9C0DC">scoped credential</text>
+  <text x="1018" y="251" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.8" font-weight="400" fill="#A9C0DC">audited · reversible</text>
+  <rect x="48" y="320" width="800" height="96" rx="10" fill="#160F1E" fill-opacity="0.9" stroke="#FBBF24" stroke-width="1"/>
+  <text x="68" y="352" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="13" font-weight="700" letter-spacing="1.8" fill="#FBBF24">HUMAN AUTHORITY GATE</text>
+  <text x="68" y="376" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.6" font-weight="400" fill="#A9C0DC">Destructive or irreversible actions — key rotation, tenant-wide revoke, host isolation in prod —</text>
+  <text x="68" y="394" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.6" font-weight="400" fill="#A9C0DC">stop here for an explicit approval, a stated blast radius and a named owner.</text>
+  <rect x="872" y="320" width="360" height="96" rx="10" fill="#0C1726" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <text x="890" y="350" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="700" letter-spacing="1.6" fill="#8B5CF6">AGENT GUARDRAILS</text>
+  <circle cx="894" cy="366" r="2.4" fill="#8B5CF6"/>
+  <text x="906" y="370" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.6" font-weight="400" fill="#7C97B8">Least-privilege tool scope per agent</text>
+  <circle cx="894" cy="383" r="2.4" fill="#8B5CF6"/>
+  <text x="906" y="387" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.6" font-weight="400" fill="#7C97B8">Retrieved content = untrusted input</text>
+  <circle cx="894" cy="400" r="2.4" fill="#8B5CF6"/>
+  <text x="906" y="404" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.6" font-weight="400" fill="#7C97B8">Kill switch + dry-run on every playbook</text>
+  <rect x="48" y="448" width="1184" height="76" rx="10" fill="#0A1420" fill-opacity="0.85" stroke="#34D399" stroke-width="1"/>
+  <text x="68" y="478" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="700" letter-spacing="1.6" fill="#34D399">EVIDENCE IS THE OUTPUT, NOT A SIDE EFFECT</text>
+  <text x="68" y="502" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.6" font-weight="400" fill="#A9C0DC">Every automated action emits a timestamped, attributable record that feeds SOC 2, ISO 27001 and DORA reporting without a manual collection exercise.</text>
+  <text x="56" y="546" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#4E7FB8">MCP servers are treated as an agent-facing API surface with their own threat model — tool scoping, prompt injection and confused-deputy risk are assessed, not assumed.</text>
+
+</svg>

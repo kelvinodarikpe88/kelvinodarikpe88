@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420"
+     viewBox="0 0 1280 420" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#F5F9FE"/>
+      <stop offset="100%" stop-color="#E9F1FA"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1C6FD6"/>
+      <stop offset="60%" stop-color="#6D3FCF"/>
+      <stop offset="100%" stop-color="#0E7C93" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="blueviolet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1C6FD6"/>
+      <stop offset="100%" stop-color="#6D3FCF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1C6FD6" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#1C6FD6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowv" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#6D3FCF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#6D3FCF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#DCE6F2" stroke-width="1" stroke-opacity="0.5"/>
+    </pattern>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#47678B"/>
+    </marker>
+    <marker id="arwb" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1C6FD6"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="420" fill="url(#bg)"/>
+  <rect width="1280" height="420" fill="url(#grid)"/>
+  <ellipse cx="1060" cy="40" rx="440" ry="300" fill="url(#glow)"/>
+  <ellipse cx="180" cy="430" rx="380" ry="200" fill="url(#glowv)"/>
+  <rect x="0" y="0" width="7" height="420" fill="url(#rail)"/>
+  <text x="56" y="66" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" letter-spacing="3.6" fill="#5B7CA1">SECURITY ENGINEERING · PUBLIC PORTFOLIO</text>
+  <text x="54" y="128" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="54" font-weight="700" fill="#0A1526">Kelvin Odarikpe</text>
+  <text x="56" y="166" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="20" font-weight="500" fill="#22405F">Application Security · Security Architecture · Detection Engineering</text>
+  <text x="56" y="194" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="16" font-weight="400" fill="#47678B">Cloud Security &amp; Infrastructure · Identity · Workloads · APIs</text>
+  <text x="56" y="219" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="16" font-weight="400" fill="#47678B">Security Automation · Data Protection &amp; Privacy · AI &amp; ML</text>
+  <rect x="56" y="250" width="214" height="66" rx="8" fill="#F6FAFF" fill-opacity="1.0" stroke="#C6D5E8" stroke-width="1"/>
+  <rect x="56" y="250" width="3" height="66" rx="1.5" fill="#0B8F63"/>
+  <text x="74" y="281" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#0B8F63">−62%</text>
+  <text x="74" y="300" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="400" letter-spacing="0.6" fill="#47678B">MTTD</text>
+  <rect x="282" y="250" width="214" height="66" rx="8" fill="#F6FAFF" fill-opacity="1.0" stroke="#C6D5E8" stroke-width="1"/>
+  <rect x="282" y="250" width="3" height="66" rx="1.5" fill="#0B8F63"/>
+  <text x="300" y="281" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#0B8F63">−68%</text>
+  <text x="300" y="300" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="400" letter-spacing="0.6" fill="#47678B">standing privilege</text>
+  <rect x="508" y="250" width="214" height="66" rx="8" fill="#F6FAFF" fill-opacity="1.0" stroke="#C6D5E8" stroke-width="1"/>
+  <rect x="508" y="250" width="3" height="66" rx="1.5" fill="#0B8F63"/>
+  <text x="526" y="281" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#0B8F63">847→187</text>
+  <text x="526" y="300" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="400" letter-spacing="0.6" fill="#47678B">criticals open</text>
+  <rect x="734" y="250" width="214" height="66" rx="8" fill="#F6FAFF" fill-opacity="1.0" stroke="#C6D5E8" stroke-width="1"/>
+  <rect x="734" y="250" width="3" height="66" rx="1.5" fill="#0B8F63"/>
+  <text x="752" y="281" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#0B8F63">67→12d</text>
+  <text x="752" y="300" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="400" letter-spacing="0.6" fill="#47678B">remediation</text>
+  <rect x="960" y="250" width="214" height="66" rx="8" fill="#F6FAFF" fill-opacity="1.0" stroke="#C6D5E8" stroke-width="1"/>
+  <rect x="960" y="250" width="3" height="66" rx="1.5" fill="#0E7C93"/>
+  <text x="978" y="281" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#0E7C93">0</text>
+  <text x="978" y="300" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="400" letter-spacing="0.6" fill="#47678B">SOC 2 exceptions</text>
+  <text x="56" y="352" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="13.5" font-weight="400" fill="#22405F">Every control below ships with a test, a CI gate and a runbook — not a slide deck.</text>
+  <text x="56" y="378" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5B7CA1">Lab · reference · design work on synthetic data. No employer code, tenant export or customer telemetry.</text>
+  <text x="1224" text-anchor="end" y="66" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11.5" font-weight="400" letter-spacing="1.2" fill="#5B7CA1">BERLIN · DE</text>
+  <text x="1224" text-anchor="end" y="92" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11.5" font-weight="400" letter-spacing="1.2" fill="#5B7CA1">OCT 2026</text>
+
+</svg>

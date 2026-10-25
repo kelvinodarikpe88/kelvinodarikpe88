@@ -1,19 +1,19 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/banner-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/banner-light.svg">
-  <img alt="Kelvin Odarikpe — Security Engineer. Application Security, Security Architecture, Detection Engineering, Cloud Security and Infrastructure, Identity, Workloads, APIs." src="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/banner-light.png" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/hero.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/hero-light.svg?v=3">
+  <img alt="Kelvin Odarikpe — Security Engineer, Berlin. Application Security, Security Architecture, Detection Engineering, Cloud Security and Infrastructure, Identity, Workloads, APIs, Security Automation, Data Protection and Privacy, AI and ML. Production outcomes shown: MTTD down 62 percent, standing privilege down 68 percent, critical vulnerabilities 847 to 187, remediation 67 to 12 days, SOC 2 Type II zero exceptions." src="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/hero-light.png?v=3" width="100%">
 </picture>
 
 <br/>
 
 ![CompTIA Security+ ce](https://img.shields.io/badge/CompTIA_Security%2B_ce-SY0--701_%C2%B7_valid_to_2029-1E6B3A?style=flat-square)
 ![Location](https://img.shields.io/badge/Berlin-Germany-1F3864?style=flat-square)
-![Focus](https://img.shields.io/badge/open_to-AppSec_%C2%B7_Architecture_%C2%B7_Detection_%C2%B7_Cloud-0B5563?style=flat-square)
+![Focus](https://img.shields.io/badge/open_to-AppSec_%C2%B7_Architecture_%C2%B7_Detection_%C2%B7_Cloud_%C2%B7_Automation_%C2%B7_AI-0B5563?style=flat-square)
 ![Followers](https://img.shields.io/github/followers/kelvinodarikpe88?style=flat-square&color=444444)
 
-[**Architecture model**](docs/ARCHITECTURE.md) · [**Portfolio index**](docs/PORTFOLIO.md) · [**LinkedIn**](https://www.linkedin.com/in/kelvinodarikpe/) · [**Email**](mailto:kelvinodarikpe88@gmail.com)
+[**Architecture model**](docs/ARCHITECTURE.md) · [**Portfolio index**](docs/PORTFOLIO.md) · [**CISO brief**](docs/CISO-BRIEF.md) · [**Metrics ledger**](docs/METRICS.md) · [**LinkedIn**](https://www.linkedin.com/in/kelvinodarikpe/) · [**Email**](mailto:kelvinodarikpe88@gmail.com)
 
 </div>
 
@@ -21,7 +21,7 @@
 
 I build security controls that survive contact with production: authorization that is tested rather than assumed, detections that are versioned and regression-tested like software, cloud infrastructure that fails closed when someone hand-edits it, and identity that grants access for minutes instead of quarters.
 
-Seven years across SOC operations (L1–L3), detection engineering, application security and cloud security — usually the person who both designs the control and writes the code that proves it works. My default deliverable is not a document; it is a repo with a test suite, a CI gate and a runbook attached.
+Seven years across SOC operations (L1–L3), detection engineering, application security, cloud security and security automation — usually the person who both designs the control and writes the code that proves it works. My default deliverable is not a document; it is a repo with a test suite, a CI gate and a runbook attached.
 
 **What that looks like in practice**
 
@@ -29,6 +29,8 @@ Seven years across SOC operations (L1–L3), detection engineering, application 
 - **Detection engineering as software delivery.** Sigma and YARA-L rules in Git, unit-tested against real telemetry shapes, compiled to KQL for Sentinel, coverage recomputed against MITRE ATT&CK on every push.
 - **Cloud and infrastructure security by construction.** Landing-zone guardrails, IaC policy gates, CloudTrail/GuardDuty/Activity/Audit Log pipelines with retention that maps to DORA, NIS2 and PCI-DSS obligations.
 - **Identity as the primary control plane.** PIM vs standing privilege detection, Conditional Access baseline auditing, JML automation, and the non-human identities (service accounts, workload identities, agents) that most access reviews forget.
+- **Security automation with a stated blast radius.** Enrichment and correlation run unbounded; containment runs capped, reversible and evidenced, with the irreversible decisions behind a named human approver.
+- **Data protection as an engineering control.** Column-level classification enforced in the pipeline, row-level security proven with a two-tenant test, retention as code with a deletion receipt, and DSAR/erasure executed as a logged workflow instead of a ticket queue.
 
 ---
 
@@ -36,26 +38,7 @@ Seven years across SOC operations (L1–L3), detection engineering, application 
 
 Four planes, one feedback loop. Every repo below maps to a cell in this model — not to a tool list.
 
-```mermaid
-flowchart TB
-    subgraph SHIP["1 · SHIP — shift left"]
-        direction LR
-        S1["Threat model<br/>STRIDE · identity attack paths"] --> S2["Code &amp; supply chain<br/>SAST · SCA · secrets · SBOM"] --> S3["IaC &amp; policy gates<br/>Checkov · OPA/Rego · admission"]
-    end
-    subgraph RUN["2 · RUN — control planes"]
-        direction LR
-        R1["Identity<br/>Entra · Okta · PIM/JIT · NHI"] --> R2["Workloads<br/>containers · EKS · runtime"] --> R3["APIs<br/>authz · BOLA/IDOR · schemas"] --> R4["Cloud infra<br/>AWS · Azure · GCP · network"]
-    end
-    subgraph DET["3 · DETECT &amp; RESPOND"]
-        direction LR
-        D1["Telemetry<br/>CloudTrail · Okta · EDR · K8s audit"] --> D2["Detections as code<br/>Sigma to KQL / YARA-L · pytest"] --> D3["Response<br/>SOAR · IR playbooks · DFIR"]
-    end
-    subgraph GOV["4 · GOVERN"]
-        direction LR
-        G1["Evidence<br/>SOC 2 · ISO 27001 · ISO 42001"] --- G2["Metrics<br/>MTTD · coverage · false positives"]
-    end
-    SHIP ==> RUN ==> DET ==> GOV
-```
+<img src="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/planes.svg?v=3" alt="Operating model. Four planes with one feedback loop. 01 SHIP, shift left: threat model, code and supply chain, infrastructure-as-code and policy gates. 02 RUN, control planes: identity and access, cloud posture, workloads. 03 DEFEND, detect and respond: detection as code, AI-assisted triage behind a human gate, incident response and DFIR. 04 PROVE, evidence: continuous evidence, ATT and CK coverage, audit readiness. The feedback loop re-enters 01 SHIP." width="100%">
 
 The loop that closes the model: **every incident becomes a test case, and every repeated gap becomes a policy.** Detection without that feedback is a cost centre; with it, it is how the architecture gets better.
 
@@ -77,6 +60,8 @@ Full reasoning, trust boundaries and threat model: **[docs/ARCHITECTURE.md](docs
 
 The part of the job I care most about: making the secure path the path of least resistance for engineers who have a deadline.
 
+**Outcome:** open critical vulnerabilities **847 → 187** and remediation cycle **67 → 12 days**, both measured against a fixed asset scope with re-open rate and regression rate as the counter-metrics — **M-04**, **M-05** in the [ledger](docs/METRICS.md).
+
 | Layer | What I build | Repo |
 |---|---|---|
 | **Design** | STRIDE per trust boundary, abuse cases, identity attack-path graphs, security requirements as acceptance criteria | [devsecops-security-engineering-projects](https://github.com/kelvinodarikpe88/devsecops-security-engineering-projects) |
@@ -92,6 +77,8 @@ Operating principle: a scanner finding nobody can reproduce is noise. Every find
 
 Architecture is where I try to spend my credibility: choosing the boundary, then proving the boundary holds under failure.
 
+**Outcome:** standing privileged access **−68%**, with break-glass activations and JIT approval latency tracked so the reduction cannot be bought by making access too slow to use — **M-03** in the [ledger](docs/METRICS.md).
+
 - **Identity-first threat modelling.** Model the attack path (`user → role → workload identity → control plane`), then remove the edge rather than adding a monitor on top of it.
 - **Zero-trust segmentation.** Conditional Access and device-compliance signals as the enforcement point; legacy auth blocked by default; risk-based step-up instead of static VPN trust.
 - **Policy as code.** The architecture diagram and the OPA/Rego policy are the same artefact — if it is not enforced in CI and at admission time, it is documentation, not a control.
@@ -99,9 +86,15 @@ Architecture is where I try to spend my credibility: choosing the boundary, then
 
 Reference implementation: [04-identity-security-architecture](https://github.com/kelvinodarikpe88/04-identity-security-architecture) — MSAL Graph client, PIM-vs-standing-role detection, Conditional Access baseline audit, Terraform policy layer, OPA least-privilege policy, pytest + CI.
 
+<img src="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/trust-boundaries.svg?v=3" alt="Reference architecture. Five zones — untrusted, edge, workload, data, control — with the control that must hold at each boundary, the request path and the telemetry path drawn separately, and a design-assumptions panel." width="100%">
+
+**Reading the diagram.** Every vertical boundary has to authenticate, authorise and log independently — a boundary that inherits trust from the zone beside it is not a boundary. The request path and the telemetry path are drawn separately on purpose: a control that only observes the request path is blind to anything that moves east-west. The assumption I would attack first is boundary 3, where the data zone trusts the workload zone to hold scoped credentials. That assumption is exactly what failed in October 2026: Railway disclosed that encrypted customer environment variables were accessed and, for a subset, **decrypted contents obtained** — encryption at rest did not help because the key material lived inside the same trust zone as the ciphertext. Zeabur's two 2026 incidents reached further through a different edge of the same assumption: long-lived administrative credentials held recoverably in a platform database, and 3.2 million environment-variable records read with them. Neither was a cryptography failure. Both were a key-custody and blast-radius failure.
+
 ---
 
 ## Detection engineering & security operations
+
+**Outcome:** mean time to detect **−62%** and false positives **12% → 6%**, with alert volume and true-positive coverage held flat as the counter-metrics, and every rule change behind a CI gate — **M-01**, **M-02**, **M-08** in the [ledger](docs/METRICS.md).
 
 | Capability | Approach | Repo |
 |---|---|---|
@@ -116,7 +109,41 @@ The production-equivalent stack — Sentinel/KQL, Elastic, Entra/Okta/Intune, Te
 
 ---
 
+## Security automation
+
+Automation is how a small team covers a cloud estate, and it is the fastest way to cause an outage with good intentions. So the design target is not "less human work". It is: **every automated action has a bounded blast radius, a reversal path and an evidence record written by the action itself** — and the expensive irreversible decisions stay behind a named human.
+
+**Outcome:** every containment action emits its own evidence record (actor, target, before/after, approver, reversal command) and every cap — 50 indicators per run, one account per run, 72-hour host isolation — is testable code, not a runbook promise. The metric here is the reversal time, not the volume of automation.
+
+<img src="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/ai-loop.svg?v=3" alt="AI-automated security pipeline. SIGNAL ingest, DETECT rules as code, ENRICH with AI context, DECIDE with tiered authority, ACT bounded and reversible, then a human authority gate. Side panel lists agent guardrails: least-privilege tool scope per agent, retrieved content treated as untrusted input, kill switch and dry-run on every playbook, evidence as the output." width="100%">
+
+| Stage | What runs | What it may do alone | Reversal | Evidence emitted |
+|---|---|---|---|---|
+| **Enrich** | Asset, identity and threat context on every alert — owner, exposure, EPSS, KEV status, last-seen | Anything read-only, unbounded | none needed, no state change | Enrichment snapshot attached to the case |
+| **Decide** | Severity and disposition from correlated context, not the vendor label | Propose only | none needed | Reasoning trace and inputs kept with the case |
+| **Ticket** | Case creation, deduplication, owner routing | Create and merge tickets | Close ticket | Ticket ID paired to alert ID |
+| **Block indicator** | Edge, DNS and proxy blocks from confirmed IOCs | **Capped at 50 indicators per run, 24-hour TTL** | Auto-expiry plus one-command unblock | Indicator, source, scope, expiry |
+| **Disable account** | IdP session revoke and account disable | Only on high-confidence identity compromise, one account per run | Re-enable runbook, with group memberships captured before the change | Before/after state, approver, timestamp |
+| **Isolate host** | EDR network containment | Requires an approval click; auto-releases after 72 hours | One-click release | Host, reason, approver, release time |
+| **Rotate credential** | Short-lived credential issued via OIDC, old key disabled | Never deletes, disables and waits | Re-enable if rotation fails | Key ID, issue time, consumer |
+
+**Five non-negotiables**
+
+1. **Dry-run is the default.** Every playbook ships with a `--dry-run` that prints the exact action list it would take. Enabling it is a separate, reviewed change with a named owner.
+2. **Blast-radius caps live in code, not in a runbook.** Per-run ceilings on objects touched, accounts disabled and indicators blocked, so a loop bug cannot disable a tenant at 03:00.
+3. **Idempotent and convergent.** Rerunning a playbook mid-incident has to be safe. Actions key off desired state rather than fire-once side effects.
+4. **No standing credentials in the automation.** Runners authenticate through OIDC to a short-lived role. The automation never holds a permanent key to the systems it is allowed to change.
+5. **Per-action evidence, produced at execution time.** Actor, target, before/after, approval, timestamp and the reversal command. The audit trail is a by-product, not a form filled in afterwards.
+
+**Where the AI sits, and where it stops.** Enrichment, correlation, summarisation and first-draft disposition are the work that is expensive by hand and cheap to review, so the model does those. Containment a human cannot reverse in under a minute stays behind an explicit gate: named approver, stated blast radius, one action at a time. Prompts, tool scopes and retrieved content are treated as attack surface — least-privilege tool access per agent, retrieved documents as untrusted input, and a kill switch on every agent loop.
+
+Repos: [secops-soar-ai-enrichment](https://github.com/kelvinodarikpe88/secops-soar-ai-enrichment) · [soar-vulnerability-enrichment-bot](https://github.com/kelvinodarikpe88/soar-vulnerability-enrichment-bot) · [05-incident-response-orchestration](https://github.com/kelvinodarikpe88/05-incident-response-orchestration) · [detection-as-code-cicd](https://github.com/kelvinodarikpe88/detection-as-code-cicd)
+
+---
+
 ## Cloud security & cloud infrastructure
+
+**Outcome:** critical findings down **847 → 187** with EPSS + KEV triage and a receipt for every retention and deletion check; the counter-metric is the re-open rate, because a posture number that falls by re-scoping assets has reduced nothing — **M-04** in the [ledger](docs/METRICS.md).
 
 | Domain | What I build | Repo |
 |---|---|---|
@@ -131,6 +158,8 @@ The production-equivalent stack — Sentinel/KQL, Elastic, Entra/Okta/Intune, Te
 ## Identity, access & non-human identity
 
 Identity is the highest-leverage control plane in a cloud-native estate, and the one most often reviewed annually and violated daily.
+
+**Outcome:** standing privileged access **−68%** and joiners/movers/leavers **84% automated**, with break-glass count, JIT latency and orphaned-account count as the counter-metrics — **M-03**, **M-06** in the [ledger](docs/METRICS.md).
 
 - **PIM eligibility vs standing assignment** — treat any high-privilege role held as a standing assignment as critical, regardless of holder or age. Implemented in [04-identity-security-architecture](https://github.com/kelvinodarikpe88/04-identity-security-architecture).
 - **Conditional Access baseline auditing** — re-derive compliance from live policy state on every run instead of trusting a one-time configuration.
@@ -172,6 +201,33 @@ APIs are where authorization bugs become data breaches, so this is where I test 
 
 ---
 
+## Data protection & privacy engineering
+
+Privacy engineering fails in the same place every time: the classification exists in a policy document, the copy exists in a warehouse, and nobody can say which columns hold personal data or how long they are allowed to live.
+
+**Outcome:** no production metric is claimed for this domain, and that is the honest answer — none of the eight outcomes above belongs to privacy engineering. What exists is design plus an executable two-tenant test, marked `designed` in the coverage matrix. A privacy number invented for this section would undermine every number that is real.
+
+**The four questions I design around**
+
+| Question | Control | How it is proven |
+|---|---|---|
+| **Where is personal data, and what is it?** | Column-level classification propagated from the catalog into the pipeline. A new table with an untagged `email`, `name` or `ip` column fails CI | Classification coverage report, plus the untagged-column gate in the pipeline |
+| **Who is allowed to see it?** | Row-level security per tenant, dynamic masking for support and analytics roles, and no shared read-only "analytics" account | Two-tenant RLS test: tenant B querying tenant A's key returns zero rows |
+| **How long does it live?** | Retention as code per dataset class. Deletion is a job that produces a receipt, not a ticket | Deletion receipt: object count before and after, backup expiry date, systems enumerated |
+| **Can I prove any of it?** | DSAR (GDPR Art. 15) and erasure (Art. 17) run as a scripted, logged workflow across primary store, warehouse and backups | Timestamped export bundle per request, with the list of systems that answered |
+
+**Logs and telemetry are personal data.** Most privacy debt accumulates in the SIEM: usernames, source IPs, URLs with query strings, email bodies, prompt text — retained for 400 days because nobody chose a number. Retention is set per data class, fields needed only for correlation are hashed or tokenised, and access to raw telemetry is itself access-logged.
+
+**The failure mode I design against.** A platform leaks its database and the ciphertext is worthless to the attacker, until the key turns out to sit in the same environment, guarded by the same boundary, readable by the same compromised process. In October 2026 Railway confirmed that encrypted customer environment variables were accessed and, for a subset of users, **decrypted contents were obtained**. Zeabur's second incident, over 14–15 October 2026, exposed **3,218,965 environment-variable records and 321,810 accounts** read from a production database that also held platform credentials the attacker could use directly. The lesson is architectural, not cryptographic: **envelope encryption with a KMS-held key-encryption key and a per-tenant data key**, so a stolen backup, snapshot or `DATABASE_URL` decrypts to nothing without an independent KMS authorisation that is itself logged. Secrets never live beside the data they protect, key custody is a separate blast radius, and rotation is a scheduled job rather than an incident.
+
+**Frameworks wired into the work, not cited at the end of it:** GDPR Art. 5 (minimisation, storage limitation), Art. 25 (protection by design), Art. 30 (processing records generated from the catalog), Art. 32 (encryption and access control), Art. 15 and 17 (access and erasure as code); DORA Art. 9–12 (ICT risk and incident reporting); NIS2; and the transparency and data-governance duties of the EU AI Act for the AI systems in this portfolio.
+
+**Where this sits honestly.** Classification, retention and DSAR workflows here are designed and documented; the RLS and masking checks are executable against the two-tenant harness. Across the public artifacts this domain is `designed`, not `enforced` — the coverage matrix below says so in the cell, not in a footnote.
+
+Repos: [compliance-audit-dora-pci-forensics](https://github.com/kelvinodarikpe88/compliance-audit-dora-pci-forensics) · [02-ai-security-compliance](https://github.com/kelvinodarikpe88/02-ai-security-compliance) · [audit-logging-compliance-checker](https://github.com/kelvinodarikpe88/audit-logging-compliance-checker) · [m365-sharepoint-security-lab](https://github.com/kelvinodarikpe88/m365-sharepoint-security-lab)
+
+---
+
 ## Incident response & DFIR
 
 NIST 800-61 lifecycle with evidence handling that survives a regulator's questions.
@@ -180,20 +236,65 @@ NIST 800-61 lifecycle with evidence handling that survives a regulator's questio
 
 ---
 
-## Signals I can defend
+## What a CISO should read first
 
-| Signal | Result | Mechanism |
+If you have four minutes and one question — *can this person carry a control from design to audit evidence without a project manager holding it together?* — read these two diagrams and the four answers below them.
+
+<img src="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/ciso-matrix.svg?v=3" alt="Control coverage matrix. Rows are ten control domains; columns are SOC 2, ISO 27001, NIST CSF, DORA and NIS2, and the EU AI Act. Filled markers mean enforced in CI or at runtime, half markers mean designed and documented, hollow markers mean a named gap. Third-party risk and EU AI Act conformity are the two areas deliberately thin." width="100%">
+
+**How to read the matrix.** Rows are control domains, columns are the frameworks a security programme is actually audited against. **Filled** means enforced in CI or at runtime — it blocks something. **Half** means designed and documented but not enforced end to end. **Hollow** means a gap. A coverage matrix with no hollow cells is a marketing asset, not an assessment, so the two thin areas are named rather than shaded: **third-party risk** (there is no vendor estate here to assess, so the workflow is designed and unexercised) and **EU AI Act conformity**, which is still moving and is tracked rather than claimed. Supply chain and privacy engineering sit at `designed` across all four frameworks, which is the accurate description of reference work rather than deployed programme work.
+
+<img src="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/maturity-ladder.svg?v=3" alt="Maturity ladder in four levels. L4 enforced: blocks the merge or the request, runs in CI or at runtime. L3 tested: executable with a test suite and a CI workflow. L2 lab: runs against synthetic data and needs a tenant or cluster to go end to end. L1 design: documented reference that is not an executed system, with examples from each level." width="100%">
+
+**The four questions I would ask me**
+
+| Question | Short answer | Where to verify it |
 |---|---|---|
-| Mean time to detect | **−62%** | Detections as tested, versioned code; tuning driven by measured FP populations |
-| Detection false positives | **12% → 6%** | Rules regression-tested against real telemetry shapes before deploy |
-| Standing privileged access | **−68%** | PIM/JIT eligibility replacing permanent role assignment |
-| Critical vulnerabilities open | **847 → 187** | Exploitability-led triage (EPSS + KEV) with owner and deadline per finding |
-| Remediation cycle time | **67 → 12 days** | Policy gates at merge time instead of quarterly audits |
-| Joiner / Mover / Leaver | **84% automated** | IdP-driven lifecycle with evidence output per change |
-| SOC 2 Type II | **zero exceptions** | Controls generate evidence continuously |
-| Detection change gate | **pytest on every rule change** | No rule reaches production without a passing test |
+| **What is enforced rather than designed?** | Merge-blocking OPA/Rego and Checkov gates, SAST/SCA/secret scanning that fail the build, Sigma rules that must pass pytest before deploy, PIM-versus-standing detection, admission policy on workloads. These stop a change from shipping. | `02-iac-security-gate` · `appsec-devsecops-pipeline` · `detection-as-code-cicd` · `04-identity-security-architecture` |
+| **What is lab, and is it labelled as lab?** | Every public artifact is synthetic. Each repo states its level: enforced, tested, lab or design. The log-integration repos need a real tenant to go end to end; the container lab needs a cluster. | Ladder above, [docs/PORTFOLIO.md](docs/PORTFOLIO.md), and the scope block at the foot of this page |
+| **What breaks first at scale?** | The evidence chain, not the detection. Enrichment latency and case volume are what degrade first, which is why containment actions are capped per run and a new rule has to price its false positives before it ships. | `enterprise-soc-production-stack` · `secops-soar-ai-enrichment` |
+| **What does this page not cover?** | Penetration-test-only depth, compliance paperwork as a service, and organisation building. It is an engineering portfolio: the depth is application security, detection engineering, cloud and identity, and the breadth is everything above. | This page, including the gap row in the matrix |
 
-Scope note: these are outcomes from production roles, not from the public labs in this account. Lab and design work is labelled as such throughout — see [Working principles](#working-principles).
+**What is not being claimed.** No employer code, tenant export, customer telemetry or audit evidence is published in this account. The production numbers in the next section come from production roles. The repositories come from lab and reference work. The two are kept in separate columns of the same page on purpose — the numbers are the claim, the repositories are the proof of method.
+
+---
+
+## Outcomes, and how each is measured
+
+A number without an instrument is a claim. A number without a counter-metric is a claim that can be
+gamed. Each of the eight below carries both, plus an evidence class that says who can check it.
+
+<img src="https://raw.githubusercontent.com/kelvinodarikpe88/kelvinodarikpe88/main/assets/metrics.svg?v=3" alt="Eight production outcomes as cards. Mean time to detect minus 62 percent, detection false positives 12 to 6 percent, standing privileged access minus 68 percent, critical vulnerabilities 847 to 187, remediation cycle 67 to 12 days, joiner-mover-leaver 84 percent automated, SOC 2 Type II zero exceptions, detection change gate pytest gated. Each card names the instrument that produced it and the counter-metric that must hold for the claim to mean anything. All eight are class P2, owner-reported." width="100%">
+
+| Outcome | Instrument that produced it | Counter-metric that has to hold | Class |
+|---|---|---|---|
+| `M-01` · Mean time to detect **−62%** | Sentinel / KQL timestamps, same alert classes before and after | Alert volume and suppression count stay flat | P2 |
+| `M-02` · Detection false positives **12% → 6%** | Analyst disposition labels, sampled per rule | True-positive coverage does not fall with the noise | P2 |
+| `M-03` · Standing privileged access **−68%** | PIM eligible vs permanent role assignments | Break-glass activations and JIT approval latency | P2 |
+| `M-04` · Critical vulnerabilities open **847 → 187** | EPSS + KEV triage queue, fixed asset scope | Re-open rate and mean age of open criticals | P2 |
+| `M-05` · Remediation cycle **67 → 12 days** | Ticket open → verified-fixed timestamps | Post-remediation regression rate | P2 |
+| `M-06` · Joiners / movers / leavers **84% automated** | IdP lifecycle events, one evidence artefact each | Access-review exceptions and orphaned accounts | P2 |
+| `M-07` · SOC 2 Type II **zero exceptions** | Continuous control evidence, auditor-tested | Control failure rate between audit windows | P2 |
+| `M-08` · Detection change gate, **pytest on every rule change** | CI result on every rule-changing commit | Rule coverage vs ATT&CK delta | P2 |
+
+**Class key.** **P1** re-derivable from a public artefact — anyone can re-run it today. **P2**
+owner-reported from a production role: the instrument is named, the raw telemetry is not
+publishable. **P3** lab-measured. **P4** target, not result. All eight above are **P2**, because
+they were produced inside employers' environments under NDA. The repositories in this account are
+lab and reference work, and they are the proof of *method*, not of these numbers.
+
+Each row has a ledger entry — definition, comparison basis, what would falsify it, and how it could
+be promoted to P1: **[docs/METRICS.md](docs/METRICS.md)**. That ledger also lists what is
+re-derivable today and where the public evidence is thin, including the one claim on this page whose
+public artefact does not yet support it (**M-08**: `detection-as-code-cicd` still ships a placeholder
+test, so the gate is real in production and unevidenced in public until that repo's tests parse and
+validate rules).
+
+**If you are assessing me, attack the counter-metric, not the headline.** Ask for alert volume
+alongside MTTD, true-positive coverage alongside the false-positive rate, break-glass counts
+alongside the privilege reduction, re-open rate alongside the vulnerability count. A candidate who
+can produce the counter-metric without preparation is reporting a measurement; one who cannot is
+reporting a memory.
 
 ---
 
@@ -244,6 +345,16 @@ Scope note: these are outcomes from production roles, not from the public labs i
 ![Intune](https://img.shields.io/badge/Intune-0078D4?style=flat-square)
 ![Keycloak](https://img.shields.io/badge/Keycloak-4D4D4D?style=flat-square&logo=keycloak&logoColor=white)
 
+**Automation & data controls** — patterns, not logos
+![SOAR](https://img.shields.io/badge/SOAR-1B3A5C?style=flat-square)
+![OIDC](https://img.shields.io/badge/OIDC_workload_identity-0B5563?style=flat-square)
+![Dry-run](https://img.shields.io/badge/dry--run_by_default-1E6B3A?style=flat-square)
+![Blast radius](https://img.shields.io/badge/blast--radius_caps-1E6B3A?style=flat-square)
+![Envelope encryption](https://img.shields.io/badge/envelope_encryption_%2B_KMS-4B275F?style=flat-square)
+![Row-level security](https://img.shields.io/badge/PostgreSQL_RLS-336791?style=flat-square&logo=postgresql&logoColor=white)
+![Retention](https://img.shields.io/badge/retention_as_code-7D9199?style=flat-square)
+![DSAR](https://img.shields.io/badge/DSAR_Art.15%2F17-7D9199?style=flat-square)
+
 </div>
 
 ---
@@ -280,6 +391,8 @@ See **[docs/PORTFOLIO.md](docs/PORTFOLIO.md)** for the maintained index with mat
 | IR & DFIR | `05-incident-response-orchestration` · `cloud-forensics-ir-playbook` · `dfir-timeline-super-builder` · `evtx-ransomware-hunting-engine` · `memory-forensics-volatility3-automator` · `pcap-traffic-carver-zeek` · `mac-linux-forensics-collector` |
 | Threat intelligence | `misp-threat-intel-sharing` · `cti-platform` · `cti-misp-sync-engine` · `cti-threat-hunting-simulation` |
 | Governance & assurance | `audit-logging-compliance-checker` · `compliance-audit-dora-pci-forensics` · `10-security-operations-sop` · `soc-l2-l3-sop-playbooks` |
+| Security automation | `secops-soar-ai-enrichment` · `soar-vulnerability-enrichment-bot` · `05-incident-response-orchestration` · `detection-as-code-cicd` |
+| Data protection & privacy | `compliance-audit-dora-pci-forensics` · `audit-logging-compliance-checker` · `02-ai-security-compliance` · `m365-sharepoint-security-lab` |
 
 </details>
 

@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="700"
+     viewBox="0 0 1280 700" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070C15"/>
+      <stop offset="55%" stop-color="#0B1524"/>
+      <stop offset="100%" stop-color="#101E33"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#37A2FF"/>
+      <stop offset="60%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="blueviolet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#37A2FF"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#37A2FF" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#37A2FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowv" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1B2B44" stroke-width="1" stroke-opacity="0.5"/>
+    </pattern>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7C97B8"/>
+    </marker>
+    <marker id="arwb" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#37A2FF"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="700" fill="url(#bg)"/>
+  <rect width="1280" height="700" fill="url(#grid)"/>
+  <ellipse cx="1100" cy="20" rx="400" ry="230" fill="url(#glow)"/>
+  <rect x="0" y="0" width="7" height="700" fill="url(#rail)"/>
+  <text x="56" y="56" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" letter-spacing="3.6" fill="#4E7FB8">CONTROL COVERAGE · HONEST VIEW</text>
+  <text x="54" y="96" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#F3F7FD">What is enforced, what is designed, what is missing</text>
+  <text x="56" y="122" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="13" font-weight="400" fill="#7C97B8">Rows are control domains. Columns are the frameworks a CISO is actually audited against.</text>
+  <text x="457.0" y="166" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" text-anchor="middle" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">SOC 2</text>
+  <text x="627.0" y="166" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" text-anchor="middle" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">ISO 27001</text>
+  <text x="797.0" y="166" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" text-anchor="middle" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">NIST CSF</text>
+  <text x="967.0" y="166" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" text-anchor="middle" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">DORA / NIS2</text>
+  <text x="1137.0" y="166" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" text-anchor="middle" font-weight="600" letter-spacing="0.9" fill="#4E7FB8">EU AI Act</text>
+  <path d="M56,176 L1222,176" stroke="#28405F" stroke-width="1" fill="none" opacity="0.9"/>
+  <rect x="56" y="182" width="1166" height="34" fill="#0C1726" fill-opacity="0.55" rx="4"/>
+  <text x="68" y="204" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A9C0DC">Access control &amp; JIT</text>
+  <circle cx="457.0" cy="199.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="457.0" cy="199.0" r="5.4" fill="#34D399"/>
+  <circle cx="627.0" cy="199.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="627.0" cy="199.0" r="5.4" fill="#34D399"/>
+  <circle cx="797.0" cy="199.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="797.0" cy="199.0" r="5.4" fill="#34D399"/>
+  <circle cx="967.0" cy="199.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="967.0" cy="199.0" r="5.4" fill="#34D399"/>
+  <circle cx="1137.0" cy="199.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="1137.0" cy="199.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <text x="68" y="238" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A9C0DC">Non-human identity</text>
+  <circle cx="457.0" cy="233.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="457.0" cy="233.0" r="5.4" fill="#34D399"/>
+  <circle cx="627.0" cy="233.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="627.0" cy="233.0" r="5.4" fill="#34D399"/>
+  <circle cx="797.0" cy="233.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="797.0" cy="233.0" r="5.4" fill="#34D399"/>
+  <circle cx="967.0" cy="233.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M967.0,226.6 A6.4,6.4 0 0,1 967.0,239.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="1137.0" cy="233.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="1137.0" cy="233.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <rect x="56" y="250" width="1166" height="34" fill="#0C1726" fill-opacity="0.55" rx="4"/>
+  <text x="68" y="272" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A9C0DC">Vulnerability management</text>
+  <circle cx="457.0" cy="267.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="457.0" cy="267.0" r="5.4" fill="#34D399"/>
+  <circle cx="627.0" cy="267.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="627.0" cy="267.0" r="5.4" fill="#34D399"/>
+  <circle cx="797.0" cy="267.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="797.0" cy="267.0" r="5.4" fill="#34D399"/>
+  <circle cx="967.0" cy="267.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="967.0" cy="267.0" r="5.4" fill="#34D399"/>
+  <circle cx="1137.0" cy="267.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="1137.0" cy="267.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <text x="68" y="306" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A9C0DC">Detection &amp; monitoring</text>
+  <circle cx="457.0" cy="301.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="457.0" cy="301.0" r="5.4" fill="#34D399"/>
+  <circle cx="627.0" cy="301.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="627.0" cy="301.0" r="5.4" fill="#34D399"/>
+  <circle cx="797.0" cy="301.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="797.0" cy="301.0" r="5.4" fill="#34D399"/>
+  <circle cx="967.0" cy="301.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="967.0" cy="301.0" r="5.4" fill="#34D399"/>
+  <circle cx="1137.0" cy="301.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="1137.0" cy="301.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <rect x="56" y="318" width="1166" height="34" fill="#0C1726" fill-opacity="0.55" rx="4"/>
+  <text x="68" y="340" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A9C0DC">Incident response</text>
+  <circle cx="457.0" cy="335.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="457.0" cy="335.0" r="5.4" fill="#34D399"/>
+  <circle cx="627.0" cy="335.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="627.0" cy="335.0" r="5.4" fill="#34D399"/>
+  <circle cx="797.0" cy="335.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="797.0" cy="335.0" r="5.4" fill="#34D399"/>
+  <circle cx="967.0" cy="335.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="967.0" cy="335.0" r="5.4" fill="#34D399"/>
+  <circle cx="1137.0" cy="335.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="1137.0" cy="335.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <text x="68" y="374" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A9C0DC">Log integrity &amp; retention</text>
+  <circle cx="457.0" cy="369.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="457.0" cy="369.0" r="5.4" fill="#34D399"/>
+  <circle cx="627.0" cy="369.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M627.0,362.6 A6.4,6.4 0 0,1 627.0,375.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="797.0" cy="369.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="797.0" cy="369.0" r="5.4" fill="#34D399"/>
+  <circle cx="967.0" cy="369.0" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="967.0" cy="369.0" r="5.4" fill="#34D399"/>
+  <circle cx="1137.0" cy="369.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="1137.0" cy="369.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <rect x="56" y="386" width="1166" height="34" fill="#0C1726" fill-opacity="0.55" rx="4"/>
+  <text x="68" y="408" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A9C0DC">Supply chain / SBOM</text>
+  <circle cx="457.0" cy="403.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M457.0,396.6 A6.4,6.4 0 0,1 457.0,409.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="627.0" cy="403.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M627.0,396.6 A6.4,6.4 0 0,1 627.0,409.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="797.0" cy="403.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M797.0,396.6 A6.4,6.4 0 0,1 797.0,409.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="967.0" cy="403.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M967.0,396.6 A6.4,6.4 0 0,1 967.0,409.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="1137.0" cy="403.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="1137.0" cy="403.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <text x="68" y="442" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A9C0DC">AI system governance</text>
+  <circle cx="457.0" cy="437.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="457.0" cy="437.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <circle cx="627.0" cy="437.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M627.0,430.6 A6.4,6.4 0 0,1 627.0,443.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="797.0" cy="437.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M797.0,430.6 A6.4,6.4 0 0,1 797.0,443.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="967.0" cy="437.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="967.0" cy="437.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <circle cx="1137.0" cy="437.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M1137.0,430.6 A6.4,6.4 0 0,1 1137.0,443.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <rect x="56" y="454" width="1166" height="34" fill="#0C1726" fill-opacity="0.55" rx="4"/>
+  <text x="68" y="476" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A9C0DC">Privacy engineering</text>
+  <circle cx="457.0" cy="471.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M457.0,464.6 A6.4,6.4 0 0,1 457.0,477.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="627.0" cy="471.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M627.0,464.6 A6.4,6.4 0 0,1 627.0,477.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="797.0" cy="471.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M797.0,464.6 A6.4,6.4 0 0,1 797.0,477.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="967.0" cy="471.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M967.0,464.6 A6.4,6.4 0 0,1 967.0,477.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="1137.0" cy="471.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="1137.0" cy="471.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <text x="68" y="510" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#A9C0DC">Third-party risk</text>
+  <circle cx="457.0" cy="505.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="457.0" cy="505.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <circle cx="627.0" cy="505.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="627.0" cy="505.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <circle cx="797.0" cy="505.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M797.0,498.6 A6.4,6.4 0 0,1 797.0,511.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="967.0" cy="505.0" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M967.0,498.6 A6.4,6.4 0 0,1 967.0,511.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <circle cx="1137.0" cy="505.0" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="1137.0" cy="505.0" r="1.7" fill="#F87171" opacity="0.45"/>
+  <circle cx="63" cy="552" r="9.5" fill="none" stroke="#34D399" stroke-width="1" opacity="0.32"/>
+  <circle cx="63" cy="552" r="5.4" fill="#34D399"/>
+  <text x="80" y="556" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#7C97B8">Enforced in CI / runtime</text>
+  <circle cx="313" cy="552" r="6.4" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <path d="M313,545.6 A6.4,6.4 0 0,1 313,558.4 Z" fill="#FBBF24" opacity="0.9"/>
+  <text x="330" y="556" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#7C97B8">Designed &amp; documented</text>
+  <circle cx="563" cy="552" r="6.2" fill="none" stroke="#F87171" stroke-width="1.4"/>
+  <circle cx="563" cy="552" r="1.7" fill="#F87171" opacity="0.45"/>
+  <text x="580" y="556" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#7C97B8">Gap — named, not hidden</text>
+  <rect x="56" y="582" width="1168" height="88" rx="10" fill="#160F1E" fill-opacity="0.6" stroke="#FBBF24" stroke-width="1"/>
+  <text x="76" y="610" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="11" font-weight="700" letter-spacing="1.6" fill="#FBBF24">WHY SHOW THE GAPS</text>
+  <text x="76" y="634" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.6" font-weight="400" fill="#A9C0DC">A coverage matrix with no red cells is a marketing asset, not a control assessment. Third-party risk and EU AI Act</text>
+  <text x="76" y="648" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="11.6" font-weight="400" fill="#A9C0DC">conformity are the two areas where this portfolio is deliberately thin — and where the next 90 days of work go.</text>
+
+</svg>

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="534"
+     viewBox="0 0 1280 534" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070C15"/>
+      <stop offset="55%" stop-color="#0B1524"/>
+      <stop offset="100%" stop-color="#101E33"/>
+    </linearGradient>
+    <linearGradient id="rail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#37A2FF"/>
+      <stop offset="60%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="blueviolet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#37A2FF"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#37A2FF" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#37A2FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowv" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1B2B44" stroke-width="1" stroke-opacity="0.5"/>
+    </pattern>
+    <marker id="arw" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7C97B8"/>
+    </marker>
+    <marker id="arwb" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#37A2FF"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="534" fill="url(#bg)"/>
+  <rect width="1280" height="534" fill="url(#grid)"/>
+  <ellipse cx="1080" cy="30" rx="420" ry="240" fill="url(#glow)"/>
+  <rect x="0" y="0" width="7" height="534" fill="url(#rail)"/>
+  <text x="56" y="56" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" letter-spacing="3.6" fill="#4E7FB8">OPERATING MODEL</text>
+  <text x="54" y="96" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="#F3F7FD">Four planes, one feedback loop</text>
+  <text x="56" y="122" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="13" font-weight="400" fill="#7C97B8">Every repository maps to a cell in this model — not to a tool list.</text>
+  <rect x="48" y="150" width="278" height="236" rx="12" fill="#0C1726" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="62" y="150" width="250" height="3.5" rx="1.75" fill="#37A2FF"/>
+  <text x="68" y="190" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="26" font-weight="700" fill="#37A2FF">01</text>
+  <text x="110" y="184" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.4" fill="#F3F7FD">SHIP</text>
+  <text x="110" y="202" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" font-weight="400" letter-spacing="0.6" fill="#4E7FB8">shift left</text>
+  <path d="M68,218 L306,218" stroke="#28405F" stroke-width="1" fill="none" opacity="1.0"/>
+  <circle cx="74" cy="242" r="2.6" fill="#37A2FF"/>
+  <text x="86" y="246" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">Threat model</text>
+  <text x="86" y="263" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">STRIDE · identity attack paths</text>
+  <circle cx="74" cy="290" r="2.6" fill="#37A2FF"/>
+  <text x="86" y="294" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">SAST · SCA · secrets · SBOM</text>
+  <text x="86" y="311" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">IaC &amp; policy gates</text>
+  <circle cx="74" cy="338" r="2.6" fill="#37A2FF"/>
+  <text x="86" y="342" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">Checkov · OPA/Rego · admission</text>
+  <text x="86" y="359" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">block on critical · admit only signed</text>
+  <rect x="350" y="150" width="278" height="236" rx="12" fill="#0C1726" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="364" y="150" width="250" height="3.5" rx="1.75" fill="#22D3EE"/>
+  <text x="370" y="190" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="26" font-weight="700" fill="#22D3EE">02</text>
+  <text x="412" y="184" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.4" fill="#F3F7FD">RUN</text>
+  <text x="412" y="202" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" font-weight="400" letter-spacing="0.6" fill="#4E7FB8">control planes</text>
+  <path d="M370,218 L608,218" stroke="#28405F" stroke-width="1" fill="none" opacity="1.0"/>
+  <circle cx="376" cy="242" r="2.6" fill="#22D3EE"/>
+  <text x="388" y="246" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">Identity &amp; access</text>
+  <text x="388" y="263" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">PIM/JIT · CA baseline · NHI</text>
+  <circle cx="376" cy="290" r="2.6" fill="#22D3EE"/>
+  <text x="388" y="294" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">Cloud posture</text>
+  <text x="388" y="311" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">CSPM · guardrails · drift</text>
+  <circle cx="376" cy="338" r="2.6" fill="#22D3EE"/>
+  <text x="388" y="342" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">Workloads</text>
+  <text x="388" y="359" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">containers · EDR · runtime</text>
+  <rect x="652" y="150" width="278" height="236" rx="12" fill="#0C1726" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="666" y="150" width="250" height="3.5" rx="1.75" fill="#8B5CF6"/>
+  <text x="672" y="190" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="26" font-weight="700" fill="#8B5CF6">03</text>
+  <text x="714" y="184" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.4" fill="#F3F7FD">DEFEND</text>
+  <text x="714" y="202" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" font-weight="400" letter-spacing="0.6" fill="#4E7FB8">detect &amp; respond</text>
+  <path d="M672,218 L910,218" stroke="#28405F" stroke-width="1" fill="none" opacity="1.0"/>
+  <circle cx="678" cy="242" r="2.6" fill="#8B5CF6"/>
+  <text x="690" y="246" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">Detection as code</text>
+  <text x="690" y="263" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">Sigma/YARA-L · pytest · CI</text>
+  <circle cx="678" cy="290" r="2.6" fill="#8B5CF6"/>
+  <text x="690" y="294" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">AI-assisted triage</text>
+  <text x="690" y="311" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">enrichment · human gate</text>
+  <circle cx="678" cy="338" r="2.6" fill="#8B5CF6"/>
+  <text x="690" y="342" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">IR &amp; DFIR</text>
+  <text x="690" y="359" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">NIST 800-61 · chain of custody</text>
+  <rect x="954" y="150" width="278" height="236" rx="12" fill="#0C1726" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="968" y="150" width="250" height="3.5" rx="1.75" fill="#34D399"/>
+  <text x="974" y="190" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="26" font-weight="700" fill="#34D399">04</text>
+  <text x="1016" y="184" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="1.4" fill="#F3F7FD">PROVE</text>
+  <text x="1016" y="202" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.5" font-weight="400" letter-spacing="0.6" fill="#4E7FB8">evidence</text>
+  <path d="M974,218 L1212,218" stroke="#28405F" stroke-width="1" fill="none" opacity="1.0"/>
+  <circle cx="980" cy="242" r="2.6" fill="#34D399"/>
+  <text x="992" y="246" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">Continuous evidence</text>
+  <text x="992" y="263" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">CI-generated · timestamped</text>
+  <circle cx="980" cy="290" r="2.6" fill="#34D399"/>
+  <text x="992" y="294" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">Coverage</text>
+  <text x="992" y="311" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">ATT&amp;CK · control matrix</text>
+  <circle cx="980" cy="338" r="2.6" fill="#34D399"/>
+  <text x="992" y="342" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#A9C0DC">Audit readiness</text>
+  <text x="992" y="359" font-family="'DejaVu Sans Mono',Consolas,'Liberation Mono',Menlo,monospace" font-size="10.6" font-weight="400" fill="#7C97B8">SOC 2 · ISO 27001 · DORA · NIS2</text>
+  <rect x="48" y="414" width="1184" height="76" rx="10" fill="#0A1420" fill-opacity="1.0" stroke="#28405F" stroke-width="1"/>
+  <rect x="49" y="426" width="3.5" height="52" rx="1.75" fill="#8B5CF6"/>
+  <text x="72" y="440" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="10.5" font-weight="600" letter-spacing="2.2" fill="#8B5CF6">FEEDBACK LOOP · RE-ENTERS 01 SHIP</text>
+  <text x="72" y="464" font-family="'Liberation Sans','DejaVu Sans',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#A9C0DC">Evidence produced in PROVE re-tunes DEFEND, which re-prioritises RUN, which re-scopes SHIP. Coverage is recomputed on every push.</text>
+
+</svg>
