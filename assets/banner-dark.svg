@@ -1,74 +1,381 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="Kelvin Odarikpe — Security Engineer: Application Security, Security Architecture, Detection Engineering, Cloud Security and Infrastructure, Identity, Workloads, APIs">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#070C15"/>
-      <stop offset="55%" stop-color="#0B1524"/>
-      <stop offset="100%" stop-color="#101E33"/>
-    </linearGradient>
-    <linearGradient id="rail" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#37A2FF"/>
-      <stop offset="100%" stop-color="#8B5CF6"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#2E7DF7" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="#2E7DF7" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#1B2B44" stroke-width="1" stroke-opacity="0.55"/>
-    </pattern>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1920" height="760"
+     viewBox="0 0 1920 760"
+     role="img"
+     aria-labelledby="title desc">
+<title id="title">Kelvin Odarikpe | Security Engineering Portfolio</title>
+<desc id="desc">Animated cybersecurity portfolio banner featuring application security, automation security, architecture, detection, cloud, infrastructure, identity, workloads and APIs.</desc>
 
-  <rect width="1280" height="320" fill="url(#bg)"/>
-  <rect width="1280" height="320" fill="url(#grid)"/>
-  <ellipse cx="1080" cy="40" rx="420" ry="260" fill="url(#glow)"/>
-  <rect x="0" y="0" width="6" height="320" fill="url(#rail)"/>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1">
+    <stop stop-color="#020817"/>
+    <stop offset=".55" stop-color="#071531"/>
+    <stop offset="1" stop-color="#100B35"/>
+  </linearGradient>
+  <linearGradient id="name" x2="1" y2="0">
+    <stop stop-color="#F8FAFC"/>
+    <stop offset=".38" stop-color="#47E8FF"/>
+    <stop offset=".7" stop-color="#6485FF"/>
+    <stop offset="1" stop-color="#D278FF"/>
+  </linearGradient>
+  <linearGradient id="accent" x2="1" y2="0">
+    <stop stop-color="#00E5FF"/>
+    <stop offset=".5" stop-color="#397AFF"/>
+    <stop offset="1" stop-color="#A855F7"/>
+  </linearGradient>
+  <radialGradient id="halo">
+    <stop stop-color="#177BFF" stop-opacity=".32"/>
+    <stop offset="1" stop-color="#177BFF" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="grid" width="56" height="56"
+           patternUnits="userSpaceOnUse">
+    <path d="M56 0H0V56" fill="none"
+          stroke="#2C5A92" stroke-width="1"
+          opacity=".24"/>
+  </pattern>
+  <filter id="glow" x="-60%" y="-60%"
+          width="220%" height="220%">
+    <feGaussianBlur stdDeviation="6" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+  <filter id="shadow" x="-30%" y="-40%"
+          width="160%" height="180%">
+    <feDropShadow dx="0" dy="5" stdDeviation="8"
+                  flood-color="#008BFF"
+                  flood-opacity=".45"/>
+  </filter>
+  <style>
+    .headline {
+      font-family:Arial,Helvetica,sans-serif;
+      font-size:108px;
+      font-weight:800;
+      letter-spacing:-4px;
+    }
+    .sans {
+      font-family:Arial,Helvetica,sans-serif;
+    }
+    .mono {
+      font-family:Consolas,Menlo,monospace;
+    }
+    .enter {
+      animation:appear 1.3s ease-out both;
+    }
+    .late {
+      animation-delay:.3s;
+    }
+    .later {
+      animation-delay:.6s;
+    }
+    .pulse {
+      animation:pulse 3s ease-in-out infinite;
+      transform-origin:center;
+      transform-box:fill-box;
+    }
+    .float {
+      animation:float 5s ease-in-out infinite;
+    }
+    .flow {
+      stroke-dasharray:14 16;
+      animation:flow 3s linear infinite;
+    }
+    .blink {
+      animation:blink 2.4s ease-in-out infinite;
+    }
+    .scan {
+      animation:scan 6s ease-in-out infinite;
+    }
+    @keyframes appear {
+      from {opacity:0;transform:translateY(18px)}
+      to {opacity:1;transform:translateY(0)}
+    }
+    @keyframes pulse {
+      0%,100% {opacity:.7}
+      50% {opacity:1}
+    }
+    @keyframes float {
+      0%,100% {transform:translateY(0)}
+      50% {transform:translateY(-12px)}
+    }
+    @keyframes flow {
+      to {stroke-dashoffset:-120}
+    }
+    @keyframes blink {
+      0%,100% {opacity:.3}
+      50% {opacity:1}
+    }
+    @keyframes scan {
+      0%,100% {opacity:.1;transform:translateY(0)}
+      50% {opacity:.45;transform:translateY(270px)}
+    }
+    @media (prefers-reduced-motion:reduce) {
+      * {animation:none!important}
+    }
+  </style>
+</defs>
 
-  <g font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif">
-    <text x="56" y="78" font-size="13" font-weight="600" letter-spacing="4.2" fill="#4E7FB8">SECURITY ENGINEERING PORTFOLIO</text>
+<!-- Background -->
+<rect width="1920" height="760" fill="url(#bg)"/>
+<rect width="1920" height="760" fill="url(#grid)"/>
+<ellipse cx="1510" cy="280" rx="500" ry="370"
+         fill="url(#halo)"/>
+<rect width="12" height="760" fill="url(#accent)"/>
+<rect width="1920" height="3" fill="url(#accent)"/>
 
-    <text x="54" y="150" font-size="56" font-weight="700" letter-spacing="-0.5" fill="#F3F7FD">Kelvin Odarikpe</text>
+<!-- Technical background -->
+<g fill="none" stroke="#1267BB" opacity=".24">
+  <circle cx="1570" cy="270" r="330"/>
+  <circle cx="1570" cy="270" r="260"/>
+  <circle cx="1570" cy="270" r="190"/>
+  <path d="M1120 270H1920M1570 0V570"/>
+  <path d="M1020 650L1500 440L1920 630"/>
+  <path d="M1140 720L1570 480L1920 720"/>
+</g>
 
-    <text x="56" y="192" font-size="21" font-weight="500" fill="#A9C0DC">Application Security &#183; Security Architecture &#183; Detection Engineering</text>
+<!-- Moving scan line -->
+<rect class="scan" x="1000" y="70"
+      width="850" height="2"
+      fill="#00E5FF" opacity=".25"/>
 
-    <text x="56" y="222" font-size="17" font-weight="400" fill="#7C97B8">Cloud Security &amp; Infrastructure &#183; Identity &#183; Workloads &#183; APIs</text>
+<!-- Portfolio label -->
+<g class="enter">
+  <path d="M92 110H740L770 137H900"
+        stroke="#00DFFF" stroke-width="2"
+        fill="none"/>
+  <circle class="blink" cx="111" cy="110" r="7"
+          fill="#00EAFF" filter="url(#glow)"/>
+  <text x="151" y="119"
+        class="sans"
+        font-size="22" font-weight="700"
+        letter-spacing="7" fill="#C1E8FF">
+    SECURITY ENGINEERING PORTFOLIO
+  </text>
+</g>
+
+<!-- Main name -->
+<g class="enter late">
+  <text x="85" y="305"
+        class="headline"
+        fill="url(#name)"
+        filter="url(#shadow)">
+    Kelvin Odarikpe
+  </text>
+  <text x="90" y="365"
+        class="sans"
+        font-size="35"
+        font-weight="800"
+        letter-spacing="10"
+        fill="#F0F8FF">
+    SECURITY ENGINEER
+  </text>
+  <rect x="650" y="347" width="365"
+        height="5" rx="2"
+        fill="url(#accent)"/>
+</g>
+
+<!-- Specializations -->
+<g class="enter later sans"
+   font-size="27" fill="#D7E9FF">
+  <text x="90" y="435">
+    Application Security
+    <tspan fill="#00E5FF"> • </tspan>
+    Automation Security
+  </text>
+  <text x="90" y="478">
+    Security Architecture
+    <tspan fill="#00E5FF"> • </tspan>
+    Detection Engineering
+  </text>
+  <text x="90" y="521" font-size="25"
+        fill="#A9C7E9">
+    Cloud &amp; Infrastructure
+    <tspan fill="#A78BFA"> • </tspan>
+    Identity
+    <tspan fill="#00E5FF"> • </tspan>
+    Workloads
+    <tspan fill="#A78BFA"> • </tspan>
+    APIs
+  </text>
+</g>
+
+<!-- Animated security automation graphic -->
+<g transform="translate(1490 275)">
+  <g class="pulse">
+    <circle r="195" fill="none"
+            stroke="#1565C0" stroke-width="2"/>
+    <circle r="155" fill="none"
+            stroke="#6B5BFF" stroke-width="2"
+            stroke-dasharray="8 12"/>
+    <circle r="115" fill="url(#halo)"/>
   </g>
 
-  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.5" font-weight="600" letter-spacing="1.4">
-    <g>
-      <rect x="56" y="252" width="85" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="72" y="271" fill="#9FB9D8">APPSEC</text>
-    </g>
-    <g>
-      <rect x="153" y="252" width="138" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="169" y="271" fill="#9FB9D8">ARCHITECTURE</text>
-    </g>
-    <g>
-      <rect x="303" y="252" width="111" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="319" y="271" fill="#9FB9D8">DETECTION</text>
-    </g>
-    <g>
-      <rect x="426" y="252" width="76" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="442" y="271" fill="#9FB9D8">CLOUD</text>
-    </g>
-    <g>
-      <rect x="514" y="252" width="76" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="530" y="271" fill="#9FB9D8">INFRA</text>
-    </g>
-    <g>
-      <rect x="602" y="252" width="102" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="618" y="271" fill="#9FB9D8">IDENTITY</text>
-    </g>
-    <g>
-      <rect x="716" y="252" width="111" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="732" y="271" fill="#9FB9D8">WORKLOADS</text>
-    </g>
-    <g>
-      <rect x="839" y="252" width="67" height="30" rx="6" fill="#0E1B2C" stroke="#28405F"/>
-      <text x="855" y="271" fill="#9FB9D8">APIs</text>
-    </g>
+  <!-- Network automation pathways -->
+  <g stroke="#00DFFF" stroke-width="3"
+     fill="none" class="flow"
+     filter="url(#glow)">
+    <path d="M-95 -50L-240 -140H-340"/>
+    <path d="M95 -45L230 -120H330"/>
+    <path d="M-90 70L-245 150H-330"/>
+    <path d="M90 70L235 145H330"/>
+    <path d="M0 120V225"/>
   </g>
 
-  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1.2">
-    <text x="1060" y="271" fill="#4E7FB8">BERLIN &#183; DE</text>
+  <!-- Nodes -->
+  <g fill="#071D43" stroke="#00DFFF"
+     stroke-width="3">
+    <rect x="-370" y="-175" width="85"
+          height="70" rx="12"/>
+    <rect x="285" y="-155" width="85"
+          height="70" rx="12"/>
+    <rect x="-370" y="115" width="85"
+          height="70" rx="12"/>
+    <rect x="285" y="110" width="85"
+          height="70" rx="12"/>
   </g>
+
+  <!-- Automation node symbols -->
+  <g stroke="#76EFFF" stroke-width="4"
+     fill="none" stroke-linecap="round">
+    <path d="M-353 -140h50m-43 -13h36m-36 26h36"/>
+    <path d="M305 -120h42m-42 12h30m-30 12h42"/>
+    <circle cx="-328" cy="150" r="17"/>
+    <path d="M-328 123v10m0 34v10m-27 -27h10m34 0h10"/>
+    <path d="M306 145h43m-22 -21v43"/>
+  </g>
+
+  <!-- Central shield -->
+  <g class="float" filter="url(#glow)">
+    <path d="M0 -145
+             L105 -102
+             L100 20
+             Q90 100 0 145
+             Q-90 100 -100 20
+             L-105 -102Z"
+          fill="#102E75"
+          stroke="#42CFFF"
+          stroke-width="7"/>
+    <path d="M0 -120L82 -85L78 15
+             Q72 78 0 116
+             Q-72 78 -78 15L-82 -85Z"
+          fill="#091B4B"
+          stroke="#8B5CF6"
+          stroke-width="4"/>
+    <rect x="-36" y="-5" width="72"
+          height="68" rx="12"
+          fill="#09CFFF"
+          stroke="#A5F3FC" stroke-width="3"/>
+    <path d="M-22 -5V-28
+             A22 22 0 0 1 22 -28V-5"
+          fill="none" stroke="#BDF7FF"
+          stroke-width="10"/>
+    <circle cx="0" cy="23" r="7" fill="#06214A"/>
+    <path d="M0 28V41" stroke="#06214A"
+          stroke-width="6"/>
+  </g>
+</g>
+
+<!-- Bottom separator -->
+<path d="M85 563H1835" stroke="url(#accent)"
+      stroke-width="2" opacity=".55"/>
+
+<!-- Skill cards -->
+<g class="sans" font-size="20"
+   font-weight="700" text-anchor="middle">
+
+  <g>
+    <rect x="90" y="595" width="170" height="65"
+          rx="12" fill="#092A42"
+          stroke="#00DFFF" stroke-width="2"/>
+    <text x="175" y="635" fill="#6EE7FF">APPSEC</text>
+  </g>
+
+  <g>
+    <rect x="273" y="595" width="260" height="65"
+          rx="12" fill="#241342"
+          stroke="#C084FC" stroke-width="2"/>
+    <text x="403" y="622" fill="#E9C9FF">AUTOMATION</text>
+    <text x="403" y="645" fill="#E9C9FF">SECURITY</text>
+  </g>
+
+  <g>
+    <rect x="546" y="595" width="225" height="65"
+          rx="12" fill="#092A42"
+          stroke="#38BDF8" stroke-width="2"/>
+    <text x="658" y="635" fill="#A5E8FF">
+      ARCHITECTURE
+    </text>
+  </g>
+
+  <g>
+    <rect x="784" y="595" width="190" height="65"
+          rx="12" fill="#07363B"
+          stroke="#2DD4BF" stroke-width="2"/>
+    <text x="879" y="635" fill="#5EEAD4">
+      DETECTION
+    </text>
+  </g>
+
+  <g>
+    <rect x="987" y="595" width="135" height="65"
+          rx="12" fill="#092A42"
+          stroke="#38BDF8" stroke-width="2"/>
+    <text x="1054" y="635" fill="#A5E8FF">
+      CLOUD
+    </text>
+  </g>
+
+  <g>
+    <rect x="1135" y="595" width="125" height="65"
+          rx="12" fill="#241342"
+          stroke="#A78BFA" stroke-width="2"/>
+    <text x="1197" y="635" fill="#DDD6FE">
+      INFRA
+    </text>
+  </g>
+
+  <g>
+    <rect x="1273" y="595" width="170" height="65"
+          rx="12" fill="#092A42"
+          stroke="#38BDF8" stroke-width="2"/>
+    <text x="1358" y="635" fill="#A5E8FF">
+      IDENTITY
+    </text>
+  </g>
+
+  <g>
+    <rect x="1456" y="595" width="190" height="65"
+          rx="12" fill="#07363B"
+          stroke="#2DD4BF" stroke-width="2"/>
+    <text x="1551" y="635" fill="#5EEAD4">
+      WORKLOADS
+    </text>
+  </g>
+
+  <g>
+    <rect x="1659" y="595" width="120" height="65"
+          rx="12" fill="#241342"
+          stroke="#C084FC" stroke-width="2"/>
+    <text x="1719" y="635" fill="#E9C9FF">
+      APIs
+    </text>
+  </g>
+</g>
+
+<!-- Location -->
+<g class="mono" font-size="20"
+   font-weight="700" letter-spacing="3">
+  <path d="M1580 708H1850"
+        stroke="#38BDF8" stroke-width="2"/>
+  <text x="1635" y="700" fill="#93C5FD">
+    BERLIN &#183; DE
+  </text>
+</g>
+
+<!-- Bottom glow -->
+<rect x="0" y="752" width="1920" height="8"
+      fill="url(#accent)" opacity=".8"/>
 </svg>
+￼
+Publish it to GitHub
