@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="Kelvin Odarikpe — Security Engineer: Application Security, Security Architecture, Detection Engineering, Cloud Security and Infrastructure, Identity, Workloads, APIs">
+  <defs>
+    <linearGradient id="bgL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#F3F7FD"/>
+      <stop offset="100%" stop-color="#E6EEF9"/>
+    </linearGradient>
+    <linearGradient id="railL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1F6FEB"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <radialGradient id="glowL" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#2E7DF7" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#2E7DF7" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridL" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#C7D7EC" stroke-width="1" stroke-opacity="0.7"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="320" fill="url(#bgL)"/>
+  <rect width="1280" height="320" fill="url(#gridL)"/>
+  <ellipse cx="1080" cy="40" rx="420" ry="260" fill="url(#glowL)"/>
+  <rect x="0" y="0" width="6" height="320" fill="url(#railL)"/>
+
+  <g font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+    <text x="56" y="78" font-size="13" font-weight="600" letter-spacing="4.2" fill="#5A6E8C">SECURITY ENGINEERING PORTFOLIO</text>
+
+    <text x="54" y="150" font-size="56" font-weight="700" letter-spacing="-0.5" fill="#0B1524">Kelvin Odarikpe</text>
+
+    <text x="56" y="192" font-size="21" font-weight="500" fill="#2A3E58">Application Security &#183; Security Architecture &#183; Detection Engineering</text>
+
+    <text x="56" y="222" font-size="17" font-weight="400" fill="#54688A">Cloud Security &amp; Infrastructure &#183; Identity &#183; Workloads &#183; APIs</text>
+  </g>
+
+  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12.5" font-weight="600" letter-spacing="1.4">
+    <g>
+      <rect x="56" y="252" width="85" height="30" rx="6" fill="#FFFFFF" stroke="#BFD2EA"/>
+      <text x="72" y="271" fill="#2F4A6B">APPSEC</text>
+    </g>
+    <g>
+      <rect x="153" y="252" width="138" height="30" rx="6" fill="#FFFFFF" stroke="#BFD2EA"/>
+      <text x="169" y="271" fill="#2F4A6B">ARCHITECTURE</text>
+    </g>
+    <g>
+      <rect x="303" y="252" width="111" height="30" rx="6" fill="#FFFFFF" stroke="#BFD2EA"/>
+      <text x="319" y="271" fill="#2F4A6B">DETECTION</text>
+    </g>
+    <g>
+      <rect x="426" y="252" width="76" height="30" rx="6" fill="#FFFFFF" stroke="#BFD2EA"/>
+      <text x="442" y="271" fill="#2F4A6B">CLOUD</text>
+    </g>
+    <g>
+      <rect x="514" y="252" width="76" height="30" rx="6" fill="#FFFFFF" stroke="#BFD2EA"/>
+      <text x="530" y="271" fill="#2F4A6B">INFRA</text>
+    </g>
+    <g>
+      <rect x="602" y="252" width="102" height="30" rx="6" fill="#FFFFFF" stroke="#BFD2EA"/>
+      <text x="618" y="271" fill="#2F4A6B">IDENTITY</text>
+    </g>
+    <g>
+      <rect x="716" y="252" width="111" height="30" rx="6" fill="#FFFFFF" stroke="#BFD2EA"/>
+      <text x="732" y="271" fill="#2F4A6B">WORKLOADS</text>
+    </g>
+    <g>
+      <rect x="839" y="252" width="67" height="30" rx="6" fill="#FFFFFF" stroke="#BFD2EA"/>
+      <text x="855" y="271" fill="#2F4A6B">APIs</text>
+    </g>
+  </g>
+
+  <g font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" letter-spacing="1.2">
+    <text x="1060" y="271" fill="#5A6E8C">BERLIN &#183; DE</text>
+  </g>
+</svg>
